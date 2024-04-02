@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('centros_de_formacaos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('localizacao');
+            $table->longText('localizacao');
             $table->integer('vagas');
             $table->timestamps();
         });
