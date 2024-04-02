@@ -20,7 +20,7 @@ class Centros_De_FormacoesController extends Controller
      */
     public function create()
     {
-    return view('centros.create');
+        return view('centros_de_formacoes.create');
     }
 
     /**
@@ -28,6 +28,16 @@ class Centros_De_FormacoesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nome' => 'required',
+            'localizacao' => 'required',
+            'vagas' => 'required',
+        ]);
+
+        Centro_de_formacao::create($request->all());
+
+        return redirect()->route('centros_de_formacoes.index')
+                         ->with('success','Centro de formação Criado');
         //
     }
 
