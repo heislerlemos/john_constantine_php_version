@@ -2,7 +2,7 @@
 
 
 @section('content')
-
+<header>
 <h1> Criar centro ... </h1>
 <h2>Adicionar um novo centro</h2>
 
