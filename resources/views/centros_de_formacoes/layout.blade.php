@@ -9,7 +9,11 @@
     <img src="{{URL::asset('https://ula.co.ao/assets/imagens/ula/LOGO_ULA-01.png')}}">
 
      </a>
+      <div class="navbar-end">
+        <a class="navbar-item">
 
+        </a>
+      </div>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>

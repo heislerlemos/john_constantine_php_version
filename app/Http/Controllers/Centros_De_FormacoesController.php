@@ -49,7 +49,9 @@ class Centros_De_FormacoesController extends Controller
      */
     public function show(Centro_de_formacao $centro_de_formacao)
     {
-        //
+    
+    return view ('centros_de_formacoes.show', compact('centro_de_formacao'));
+    
     }
 
     /**

@@ -2,7 +2,11 @@
 
 
 @section('content')
-<header>
+<head>
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body class="has-text-centered  has-text-black has-background-white" align="center">
 <h1> Criar centro ... </h1>
 <h2>Adicionar um novo centro</h2>
 
@@ -33,5 +37,5 @@
 
 </form>
 
-
+</body>
 @endsection

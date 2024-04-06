@@ -1,2 +1,4 @@
 @import 'bulma/css/bulma.css';
-
+.strong {
+color: black;
+}

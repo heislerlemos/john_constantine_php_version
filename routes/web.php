@@ -11,10 +11,12 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('centros_de_formacoes.index');
 });
+*/
 
+Route::get('/', [Centros_De_FormacoesController::class, 'index']);
 Route::resource('centros_de_formacoes', Centros_De_FormacoesController::class);
