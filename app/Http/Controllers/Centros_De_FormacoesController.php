@@ -12,7 +12,7 @@ class Centros_De_FormacoesController extends Controller
      */
     public function index()
     {
-        $centros_de_formacoes = Centro_de_formacao::latest()->paginate(5);
+        $centros_de_formacoes = Centro_de_formacao::latest()->paginate(20);
 
         return view('centros_de_formacoes.index',compact('centros_de_formacoes'))
             ->with(request()->input('page'));        //
@@ -47,10 +47,12 @@ class Centros_De_FormacoesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Centro_de_formacao $centro_de_formacao)
+    public function show(Centro_de_formacao $centros_de_formaco)
     {
-    
-    return view ('centros_de_formacoes.show', compact('centro_de_formacao'));
+   
+ 
+    return view ('centros_de_formacoes.show' 
+    ,compact('centros_de_formaco'));
     
     }
 

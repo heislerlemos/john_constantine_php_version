@@ -1,12 +1,13 @@
 
 
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 <html>
     <head>
         <title> @yield('title')</title>
    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item">
-    <img src="{{URL::asset('https://ula.co.ao/assets/imagens/ula/LOGO_ULA-01.png')}}">
+    <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
+    <img src="{{URL::asset('https://th.bing.com/th/id/OIP.W-rR47Apq4tHQKuGrPS3ygAAAA?rs=1&pid=ImgDetMain')}}">
 
      </a>
       <div class="navbar-end">
