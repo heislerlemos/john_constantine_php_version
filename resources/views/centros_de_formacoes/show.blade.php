@@ -1,21 +1,28 @@
 @extends('centros_de_formacoes.layout')
-
 @section('content')
 <head> 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="has-text-centered has-text-black has-background-white" align="center">
 <br>
-<h2> Ver produtos </h2>
-<h2> Nome  : </h2>
-
-{{ $centros_de_formaco->id }}
+<div class="columns">
+<div class="column">
+<p>
+<h1> Nome  : </h1>
 {{ $centros_de_formaco->nome }} 
-
-<h2> Localização : </h2>
-{{ $centros_de_formaco->localizacao }}
-
-<h2> Vagas : </h2>
+</p>
+<br>
+<p>
+<h1> Localização : </h1> <hr>
+<iframe src="{{ $centros_de_formaco->localizacao }}" width="400"  
+height="200"></frame>
+</p>
+<br>
+<p>
+<strong> Vagas : </strong>
 {{ $centros_de_formaco->vagas }}
+</p>
+</div>
+</div>
 </body>
 @endsection
