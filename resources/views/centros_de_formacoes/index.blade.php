@@ -25,10 +25,7 @@ height: 0;
 <div class="card has-text-black has-background-light">
   <div class="card-image">
     <figure class="image image is-3by1">
-      <img
-        src="{{ $centro->imglink }}" "
-        alt="Placeholder image"
-      />
+      <img src="{{ $centro->imglink }}" alt="Placeholder image"/>
     </figure>
   </div>
   <div class="card-content">
@@ -38,15 +35,18 @@ height: 0;
 <td>Centro Nº {{$centro->id}} : {{ $centro->nome }}</td>
 <br>
 <td>Vagas : {{ $centro->vagas }}</td>
-<br>
-</div>
-<a class="button is-info has-text-white" href="{{ route('centros_de_formacoes.show',$centro->id) }}">Show</a>
-<hr>
-</div>
-</div>
+<form action="{{ route('centros_de_formacoes.destroy',$centro->id) }}" method="POST">
+<footer class="card-footer" style="border-color:lightgrey;   box-shadow: 5px 5px lightblue;">
+<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}">Show</a>
 @csrf
+@method('DELETE')
+<a type="submit" class="card-footer-item" style="color:black;"> Apagar </a>
+</footer>
+</form>
+</div>
+</div>
+</div>
 @endforeach
 </div>
 </body>
-
 @endsection

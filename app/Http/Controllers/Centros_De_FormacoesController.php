@@ -62,7 +62,6 @@ class Centros_De_FormacoesController extends Controller
      */
     public function edit(Centro_de_formacao $centro_de_formacao)
     {
-        //
     }
 
     /**
@@ -76,8 +75,11 @@ class Centros_De_FormacoesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Centro_de_formacao $centro_de_formacao)
+    public function destroy(Centro_de_formacao $centros_de_formaco)
     {
-        //
+    $centro->delete();
+    return redirect()->route('centros_de_formacoes.index')
+                        ->with('success','Produto apagado');
+    
     }
 }
