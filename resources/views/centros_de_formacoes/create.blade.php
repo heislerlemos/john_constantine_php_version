@@ -3,7 +3,6 @@
 
 @section('content')
 <head>
-@vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="has-text-centered  has-text-black has-background-white" align="center">
