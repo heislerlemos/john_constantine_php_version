@@ -35,6 +35,7 @@ class Centros_De_FormacoesController extends Controller
             'nome' => 'required',
             'localizacao' => 'required',
             'vagas' => 'required',
+            'imglink' => 'required',
         ]);
 
         Centro_de_formacao::create($request->all());

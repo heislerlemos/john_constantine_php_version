@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('centros_de_formacaos', function (Blueprint $table) {
             $table->id();
+            $table->longText('imglink');
             $table->string('nome');
             $table->longText('localizacao');
             $table->integer('vagas');

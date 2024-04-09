@@ -14,6 +14,7 @@ class Centro_de_formacao extends Model
         'nome',
         'localizacao',
         'vagas',
+        'imglink',
     ];
 
 }

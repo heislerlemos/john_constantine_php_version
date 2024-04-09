@@ -19,7 +19,9 @@
                 <strong>Nome do Curso :</strong>
                 <input type="text" name="nome"  placeholder="Name">
             </div>
-
+            <div>
+                <strong> Imagem do curso : </strong>
+                <input type="text" name="imglink" placeholder="imglink">
             <div>
                 <strong>Localização </strong>
                 <input type="text" name="localizacao" placeholder="localização"></textarea>

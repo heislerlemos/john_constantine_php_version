@@ -23,9 +23,23 @@ height: 0;
 @foreach ($centros_de_formacoes as $centro)
 <div class="column">
 <div class="card has-text-black has-background-light">
-<iframe src="{{ $centro->localizacao }}" title="description"></iframe><hr>
-<td>Centro Nº {{$centro->id}} : {{ $centro->nome }}</td><hr>
-<td>Vagas : {{ $centro->vagas }}</td><hr>
+  <div class="card-image">
+    <figure class="image image is-3by1">
+      <img
+        src="{{ $centro->imglink }}" "
+        alt="Placeholder image"
+      />
+    </figure>
+  </div>
+  <div class="card-content">
+<figure class="image image is-3by1">
+<iframe src="{{ $centro->localizacao }}" title="description" width="350" height="200"></iframe>
+</figure>
+<td>Centro Nº {{$centro->id}} : {{ $centro->nome }}</td>
+<br>
+<td>Vagas : {{ $centro->vagas }}</td>
+<br>
+</div>
 <a class="button is-info has-text-white" href="{{ route('centros_de_formacoes.show',$centro->id) }}">Show</a>
 <hr>
 </div>
