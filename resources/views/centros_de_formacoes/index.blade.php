@@ -37,10 +37,11 @@ height: 0;
 <td>Vagas : {{ $centro->vagas }}</td>
 <form action="{{ route('centros_de_formacoes.destroy',$centro->id) }}" method="POST">
 <footer class="card-footer" style="border-color:lightgrey;   box-shadow: 5px 5px lightblue;">
-<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}">Show</a>
+<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}">Ver</a>
 @csrf
 @method('DELETE')
-<a type="submit" class="card-footer-item" style="color:black;"> Apagar </a>
+<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.edit',$centro->id) }}"> Editar </a>
+<!--<a type="submit" class="card-footer-item" style="color:black;"> Apagar </a> -->
 </footer>
 </form>
 </div>

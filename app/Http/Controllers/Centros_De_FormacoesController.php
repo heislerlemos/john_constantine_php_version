@@ -60,8 +60,10 @@ class Centros_De_FormacoesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Centro_de_formacao $centro_de_formacao)
+    public function edit(Centro_de_formacao $centros_de_formaco)
     {
+            return view('centros_de_formacoes.edit',
+            compact('centros_de_formaco'));
     }
 
     /**
