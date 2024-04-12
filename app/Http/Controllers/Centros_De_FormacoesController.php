@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Centro_de_formacao;
 use Illuminate\Http\Request;
+
 class Centros_De_FormacoesController extends Controller
 {
-
 
     /**
      * Display a listing of the resource.
@@ -63,18 +63,18 @@ class Centros_De_FormacoesController extends Controller
 
     public function edit(Centro_de_formacao $centros_de_formaco)
     {
-        // First check if a username was provided.
+        echo url()->current();
+        
+        if (url()->current() == 'http://localhost:8080/centros_de_formacoes/10/edit') {
+
         if (!isset($_SERVER['PHP_AUTH_USER'])) {
-            // If no username provided, present the auth challenge.
             header('WWW-Authenticate: Basic realm="My Website"');
             header('HTTP/1.0 401 Unauthorized');
-            // User will be presented with the username/password prompt
-            // If they hit cancel, they will see this access denied message.
             echo '<p>Access denied. You did not enter a password.</p>';
-            exit; // Be safe and ensure no other content is returned.
+            exit; 
         }
 
-        // If we get here, username was provided. Check password.
+            
         if ($_SERVER['PHP_AUTH_PW'] == 'ulapass' && $_SERVER['PHP_AUTH_USER'] == 'ula') {
             echo '<p>Access granted. You know the password!</p>';
         return view('centros_de_formacoes.edit',
@@ -82,12 +82,10 @@ class Centros_De_FormacoesController extends Controller
         } else {
             echo '<p>Access denied! You do not know the password.</p>';
         } 
-
+      }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, Centro_de_formacao $centro_de_formacao)
     {
         //
