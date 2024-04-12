@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Centro_de_formacao;
 use Illuminate\Http\Request;
-
 class Centros_De_FormacoesController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $centros_de_formacoes = Centro_de_formacao::latest()->paginate(20);
-
         return view('centros_de_formacoes.index',compact('centros_de_formacoes'))
             ->with(request()->input('page'));        //
     }
@@ -50,20 +50,39 @@ class Centros_De_FormacoesController extends Controller
      */
     public function show(Centro_de_formacao $centros_de_formaco)
     {
-   
- 
-    return view ('centros_de_formacoes.show' 
-    ,compact('centros_de_formaco'));
-    
+
+
+        return view ('centros_de_formacoes.show' 
+            ,compact('centros_de_formaco'));
+
     }
 
     /**
      * Show the form for editing the specified resource.
      */
+
     public function edit(Centro_de_formacao $centros_de_formaco)
     {
-            return view('centros_de_formacoes.edit',
+        // First check if a username was provided.
+        if (!isset($_SERVER['PHP_AUTH_USER'])) {
+            // If no username provided, present the auth challenge.
+            header('WWW-Authenticate: Basic realm="My Website"');
+            header('HTTP/1.0 401 Unauthorized');
+            // User will be presented with the username/password prompt
+            // If they hit cancel, they will see this access denied message.
+            echo '<p>Access denied. You did not enter a password.</p>';
+            exit; // Be safe and ensure no other content is returned.
+        }
+
+        // If we get here, username was provided. Check password.
+        if ($_SERVER['PHP_AUTH_PW'] == 'ulapass' && $_SERVER['PHP_AUTH_USER'] == 'ula') {
+            echo '<p>Access granted. You know the password!</p>';
+        return view('centros_de_formacoes.edit',
             compact('centros_de_formaco'));
+        } else {
+            echo '<p>Access denied! You do not know the password.</p>';
+        } 
+
     }
 
     /**
@@ -79,9 +98,9 @@ class Centros_De_FormacoesController extends Controller
      */
     public function destroy(Centro_de_formacao $centros_de_formaco)
     {
-    $centro->delete();
-    return redirect()->route('centros_de_formacoes.index')
-                        ->with('success','Produto apagado');
-    
+        $centro->delete();
+        return redirect()->route('centros_de_formacoes.index')
+                         ->with('success','Produto apagado');
+
     }
 }

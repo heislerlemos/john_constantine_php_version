@@ -11,13 +11,94 @@ hr {
 height: 0;
 }
 
+
+
+.glitch-wrapper {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   box-shadow: 10px 10px;
+   background-color: #222;
+}
+
+.glitch {
+   position: relative;
+   font-size: 80px;
+   font-weight: 700;
+   line-height: 1.2;
+   color: #fff;
+   letter-spacing: 5px;
+   z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+   display: block;
+   content: attr(data-glitch);
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0.8;
+}
+
+.glitch:before {
+   animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+   color: #0ff;
+   z-index: -1;
+}
+
+.glitch:after {
+   animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+   color: #ff00ff;
+   z-index: -2;
+}
+
+@keyframes glitch-color {
+   0% {
+      transform: translate(0);
+   }
+
+   20% {
+      transform: translate(-3px, 3px);
+   }
+
+   40% {
+      transform: translate(-3px, -3px);
+   }
+
+   60% {
+      transform: translate(3px, 3px);
+   }
+
+   80% {
+      transform: translate(3px, -3px);
+   }
+
+   to {
+      transform: translate(0);
+   }
+}
+
+
 </style>
 </head>
-<br>
 <body class="has-text-centered has-text-black has-background-white" align="center">
-<figure class=" image is-3by1">
+<figure class=" image is-3by1" style="width:100%">
 <img src="{{ asset('img/fundo.jpg') }}" alt="description of myimage">
 </figure>
+<br>
+
+<div class="container">
+<section class="hero">
+  <div class="hero-body">
+<!--<div class="glitch-wrapper">
+   <div class="glitch" data-glitch="Fazemos para os estudantes 🥰 ">Fazemos para os estudantes 🥰 </div>
+</div>
+  </div>-->
+</section>
 <br>
 <div class="columns is-multiline ">
 @foreach ($centros_de_formacoes as $centro)
@@ -28,6 +109,7 @@ height: 0;
       <img src="{{ $centro->imglink }}" alt="Placeholder image"/>
     </figure>
   </div>
+
   <div class="card-content">
 <figure class="image image is-3by1">
 <iframe src="{{ $centro->localizacao }}" title="description" width="350" height="200"></iframe>
@@ -37,10 +119,10 @@ height: 0;
 <td>Vagas : {{ $centro->vagas }}</td>
 <form action="{{ route('centros_de_formacoes.destroy',$centro->id) }}" method="POST">
 <footer class="card-footer" style="border-color:lightgrey;   box-shadow: 5px 5px lightblue;">
-<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}">Ver</a>
+<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}" type="password">Ver</a>
 @csrf
 @method('DELETE')
-<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.edit',$centro->id) }}"> Editar </a>
+<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.edit',$centro->id) }}"  required> Editar </a>
 <!--<a type="submit" class="card-footer-item" style="color:black;"> Apagar </a> -->
 </footer>
 </form>
@@ -48,6 +130,7 @@ height: 0;
 </div>
 </div>
 @endforeach
+</div>
 </div>
 </body>
 @endsection

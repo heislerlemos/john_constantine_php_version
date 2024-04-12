@@ -19,4 +19,5 @@ Route::get('/', function () {
 */
 
 Route::get('/', [Centros_De_FormacoesController::class, 'index']);
+
 Route::resource('centros_de_formacoes', Centros_De_FormacoesController::class);
