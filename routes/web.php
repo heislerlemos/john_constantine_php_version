@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\Centros_De_FormacoesController;
+use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 
 
-Route::get('/', function () {
-    return view('centros_de_formacoes.index');
-});
 */
 
-Route::get('/', [Centros_De_FormacoesController::class, 'index']);
 
+
+
+Route::get('/', [Centros_De_FormacoesController::class, 'index']);
+Route::post('centros_de_formacoes/{centros_de_formaco}/cursos', [CursoController::class, 'store'])->name('centros_de_formacoes.cursos.store'); 
 Route::resource('centros_de_formacoes', Centros_De_FormacoesController::class);

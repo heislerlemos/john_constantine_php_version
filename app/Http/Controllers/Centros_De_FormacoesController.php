@@ -55,10 +55,7 @@ class Centros_De_FormacoesController extends Controller
     public function show(Centro_de_formacao $centros_de_formaco)
     {
 
-
-        return view ('centros_de_formacoes.show' 
-            ,compact('centros_de_formaco'));
-
+        return view ('centros_de_formacoes.show',compact('centros_de_formaco'));
     }
 
 
@@ -113,8 +110,19 @@ class Centros_De_FormacoesController extends Controller
     }
 
 
-    public function update(Request $request, Centro_de_formacao $centro_de_formacao)
-    {       //
+    public function update(Request $request, Centro_de_formacao $centros_de_formaco)
+    { 
+        $request->validate([
+            'nome' => 'required',
+            'vagas' => 'required',  
+        
+        ]);
+            
+
+        $centros_de_formaco->update($request->all());
+
+        return redirect()->route('centros_de_formacoes.show');
+
     }
 
     public function destroy(Centro_de_formacao $centros_de_formaco)

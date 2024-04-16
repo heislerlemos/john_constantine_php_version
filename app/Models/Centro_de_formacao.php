@@ -17,4 +17,10 @@ class Centro_de_formacao extends Model
         'imglink',
     ];
 
+    
+      public function cursos()
+    {
+        return $this->hasMany(Curso::class);
+    }
+
 }
