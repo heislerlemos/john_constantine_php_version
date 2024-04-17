@@ -116,12 +116,10 @@ class Centros_De_FormacoesController extends Controller
             'nome' => 'required',
             'vagas' => 'required',  
         
-        ]);
-            
-
+        ]);            
+    
         $centros_de_formaco->update($request->all());
-
-        return redirect()->route('centros_de_formacoes.show');
+        return redirect()->route('centros_de_formacoes.index');
 
     }
 
