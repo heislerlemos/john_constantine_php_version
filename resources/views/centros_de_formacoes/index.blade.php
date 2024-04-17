@@ -1,5 +1,5 @@
-@extends('centros_de_formacoes.layout')
 
+@extends('centros_de_formacoes.layout')
 @section('content')
 
 
@@ -7,6 +7,10 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 <style>
+.navbar{
+background:transparent !important;
+}
+
 hr {
 height: 0;
 }
@@ -85,6 +89,11 @@ height: 0;
 
 </style>
 </head>
+
+
+
+
+
 <body class="has-text-centered" align="center">
 <figure class=" image is-3by1" style="width:100%">
 <img src="{{ asset('img/fundo.jpg') }}" alt="description of myimage">

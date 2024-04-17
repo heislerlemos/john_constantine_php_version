@@ -4,31 +4,70 @@
 </head>
 
 <body class="has-text-centered" align="center">
-<div class="flex dark:hidden">
 <br>
-<div class="columns is-centered">
-<div class="column has-text-black is-half " >
 <p>
 
 <h1> Nome do curso  </h1>
 {{ $centros_de_formaco->nome }} 
 </p>
-<strong> teste Vagas : </strong>
+<strong>  Vagas : </strong>
 {{ $centros_de_formaco->vagas }}
 <br>
 <h1> Localização : </h1><!--<iframe src="{{ $centros_de_formaco->localizacao }}"></frame>-->
 </p>
 <p>
 </p>
-@foreach($centros_de_formaco->cursos as $curso ) 
 
-{{$curso->id}}
-{{ $curso->cadeiras}}
-{{ $curso->data }}
-{{$curso->horario }}
-@endforeach
+
+
+
+<div class="container">
+
+<section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">Cursos</p>
+    <p class="subtitle">Lista dos cursos disponiveis e actulizados até a data de hoje</p>
+  </div>
+</section>
 
 <br>
+<div class="columns is-mobile is-multiline">
+
+@foreach($centros_de_formaco->cursos as $curso ) 
+<div class="column is-half">
+
+<div class="card ">
+  <div class="card-content  has-text-centered ">
+    <div class="content">
+<p>Nº : {{ $curso->id}} </p>
+   </div>
+<div class="content"> 
+<h6> Curso :  {{ $curso->cadeiras}} </h6>
+</div>
+<div class="content">
+<p> Data : {{ $curso->data }} </p>
+</div>
+<div class="content">
+<p > Horario : {{$curso->horario }}</p>
+</div>
+   
+  </div>
+</div>
+
+</div>
+@endforeach
+</div>
+</div>
+<br>
+
+<section class="hero is-warning">
+  <div class="hero-body">
+    <p class="title">Admnistração</p>
+    <p class="subtitle">So a administração pode submeter cursos </p>
+  </div>
+</section>
+<div class="columns is-centered" >
+<div class="column has-text-black is-half">
 <form action="{{route("centros_de_formacoes.cursos.store",$centros_de_formaco->id)}}" method="POST">
 @csrf <!-- {{ csrf_field() }} -->
 
@@ -69,7 +108,7 @@
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link" type="submit"> Publicar o curso </button>
+    <button class="button is-link " type="submit"> Publicar o curso </button>
   </div>
 </form>
 </div>
