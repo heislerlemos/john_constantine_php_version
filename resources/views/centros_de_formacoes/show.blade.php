@@ -35,41 +35,35 @@
 <div class="field">
   <label class="label">Cursos</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text " name="horario"  value="{{$centros_de_formaco->cadeiras}}">
+    <input class="input" type="text" placeholder="Text " name="cadeiras"  value="{{$centros_de_formaco->cadeiras}}">
   </div>
 </div>
 
 <div class="field">
   <label class="label"> Preçario </label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input" name="cadeiras" value="{{$centros_de_formaco->precario }}">
-    <span class="icon is-small is-left">
-      <i class="fas fa-user"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
+  <div class="control ">
+    <input class="input is-success" type="text" placeholder="Text input" name="precario" value="{{$centros_de_formaco->precario }}">
   </div>
 </div>
 
 <div class="field">
   <label class="label">Data</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="text"  value="{{  $centros_de_formaco->data}}">
+  <div class="control">
+    <input class="input is-danger" type="text"  name='data' value="{{$centros_de_formaco->data}}">
   </div>
 </div>
 
 <div class="field">
   <label class="label">Tempo de Duração</label>
   <div class="control">
-  <input class="input is-info" value="{{ $centros_de_formaco->tempo_de_duracao}}">       
+  <input class="input is-info" type="text" name='tempo_de_duracao' value="{{ $centros_de_formaco->tempo_de_duracao}}">       
  </div>
 </div>
 
 <div class="field">
   <label class="label">Horario</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea" value="{{$centros_de_formaco->horario}}"></textarea>
+    <textarea class="textarea" name="horario" placeholder="Insira as informações do curso" value="{{$centros_de_formaco->horario}}"></textarea>
   </div>
 </div>
 
