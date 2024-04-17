@@ -85,7 +85,7 @@ height: 0;
 
 </style>
 </head>
-<body class="has-text-centered has-text-black has-background-white" align="center">
+<body class="has-text-centered" align="center">
 <figure class=" image is-3by1" style="width:100%">
 <img src="{{ asset('img/fundo.jpg') }}" alt="description of myimage">
 </figure>

@@ -3,7 +3,7 @@
 <head> 
 </head>
 
-<body class="has-text-centered hast-text-black has-background-white" align="center">
+<body class="has-text-centered" align="center">
 <div class="flex dark:hidden">
 <br>
 <div class="columns is-centered">
@@ -16,8 +16,7 @@
 <strong> teste Vagas : </strong>
 {{ $centros_de_formaco->vagas }}
 <br>
-<h1> Localização : </h1>
-<!--<iframe src="{{ $centros_de_formaco->localizacao }}"></frame>-->
+<h1> Localização : </h1><!--<iframe src="{{ $centros_de_formaco->localizacao }}"></frame>-->
 </p>
 <p>
 </p>
@@ -32,30 +31,18 @@
 <br>
 <form action="{{route("centros_de_formacoes.cursos.store",$centros_de_formaco->id)}}" method="POST">
 @csrf <!-- {{ csrf_field() }} -->
-<p> Cadeiras </p>
-<textarea name="cadeiras"></textarea>
-<p>Horario</p>
-<textarea name="horario"></textarea>
-<p> Data</p>
-<textarea name="data"></textarea>
-<p>Tempo_de_Duracao</p>
-<textarea name="tempo_de_duracao"></textarea>
-<p> Precario </p>
-<textarea name="precario"></textarea>
-<button type="submit"> Publicar o curso </button>
-</form>
 
 <div class="field">
-  <label class="label">Cadeira</label>
+  <label class="label">Cursos</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text ">
+    <input class="input" type="text" placeholder="Text " name="horario"  value="{{$centros_de_formaco->cadeiras}}">
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Username</label>
+  <label class="label"> Preçario </label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+    <input class="input is-success" type="text" placeholder="Text input" name="cadeiras" value="{{$centros_de_formaco->precario }}">
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -63,86 +50,34 @@
       <i class="fas fa-check"></i>
     </span>
   </div>
-  <p class="help is-success">This username is available</p>
 </div>
 
 <div class="field">
-  <label class="label">Email</label>
+  <label class="label">Data</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-  </div>
-  <p class="help is-danger">This email is invalid</p>
-</div>
-
-<div class="field">
-  <label class="label">Subject</label>
-  <div class="control">
-    <div class="select">
-      <select>
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </select>
-    </div>
+    <input class="input is-danger" type="text"  value="{{  $centros_de_formaco->data}}">
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Message</label>
+  <label class="label">Tempo de Duração</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
-  </div>
+  <input class="input is-info" value="{{ $centros_de_formaco->tempo_de_duracao}}">       
+ </div>
 </div>
 
 <div class="field">
+  <label class="label">Horario</label>
   <div class="control">
-    <label class="checkbox">
-      <input type="checkbox">
-      I agree to the <a href="#">terms and conditions</a>
-    </label>
-  </div>
-</div>
-
-<div class="field">
-  <div class="control">
-    <label class="radio">
-      <input type="radio" name="question">
-      Yes
-    </label>
-    <label class="radio">
-      <input type="radio" name="question">
-      No
-    </label>
+    <textarea class="textarea" placeholder="Textarea" value="{{$centros_de_formaco->horario}}"></textarea>
   </div>
 </div>
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link">Submit</button>
+    <button class="button is-link" type="submit"> Publicar o curso </button>
   </div>
-  <div class="control">
-    <button class="button is-link is-light">Cancel</button>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</form>
 </div>
 </div>
 </div>
