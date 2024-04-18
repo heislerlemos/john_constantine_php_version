@@ -2,16 +2,10 @@
 @extends('centros_de_formacoes.layout')
 @section('content')
 
-
 <head>
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-
-
-
-
-
 <body class="has-text-centered" align="center">
 <figure class=" image is-3by1" style="width:100%">
 <img src="{{ asset('img/panel.jpg') }}" alt="description of myimage">
