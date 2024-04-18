@@ -6,88 +6,6 @@
 <head>
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-<style>
-.navbar{
-background:transparent !important;
-}
-
-hr {
-height: 0;
-}
-
-
-
-.glitch-wrapper {
-   width: 100%;
-   height: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   box-shadow: 10px 10px;
-   background-color: #222;
-}
-
-.glitch {
-   position: relative;
-   font-size: 80px;
-   font-weight: 700;
-   line-height: 1.2;
-   color: #fff;
-   letter-spacing: 5px;
-   z-index: 1;
-}
-
-.glitch:before,
-.glitch:after {
-   display: block;
-   content: attr(data-glitch);
-   position: absolute;
-   top: 0;
-   left: 0;
-   opacity: 0.8;
-}
-
-.glitch:before {
-   animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-   color: #0ff;
-   z-index: -1;
-}
-
-.glitch:after {
-   animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-   color: #ff00ff;
-   z-index: -2;
-}
-
-@keyframes glitch-color {
-   0% {
-      transform: translate(0);
-   }
-
-   20% {
-      transform: translate(-3px, 3px);
-   }
-
-   40% {
-      transform: translate(-3px, -3px);
-   }
-
-   60% {
-      transform: translate(3px, 3px);
-   }
-
-   80% {
-      transform: translate(3px, -3px);
-   }
-
-   to {
-      transform: translate(0);
-   }
-}
-
-
-</style>
 </head>
 
 
@@ -96,18 +14,11 @@ height: 0;
 
 <body class="has-text-centered" align="center">
 <figure class=" image is-3by1" style="width:100%">
-<img src="{{ asset('img/fundo.jpg') }}" alt="description of myimage">
+<img src="{{ asset('img/panel.jpg') }}" alt="description of myimage">
 </figure>
 <br>
 
 <div class="container">
-<section class="hero">
-  <div class="hero-body">
-<!--<div class="glitch-wrapper">
-   <div class="glitch" data-glitch="Fazemos para os estudantes 🥰 ">Fazemos para os estudantes 🥰 </div>
-</div>
-  </div>-->
-</section>
 <br>
 <div class="columns is-multiline ">
 @foreach ($centros_de_formacoes as $centro)

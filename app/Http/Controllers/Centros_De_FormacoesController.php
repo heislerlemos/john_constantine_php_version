@@ -6,6 +6,7 @@ use App\Models\Centro_de_formacao;
 use App\Http\Controllers\EdicaoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 
 class Centros_De_FormacoesController extends Controller
 {
@@ -35,6 +36,7 @@ class Centros_De_FormacoesController extends Controller
      */
     public function store(Request $request)
     {
+        DB::connection()->enableQueryLog();
         $request->validate([
             'nome' => 'required',
             'localizacao' => 'required',
@@ -43,7 +45,7 @@ class Centros_De_FormacoesController extends Controller
         ]);
 
         Centro_de_formacao::create($request->all());
-
+        $queries = DB::getQueryLog();
         return redirect()->route('centros_de_formacoes.index')
                          ->with('success','Centro de formação Criado');
         //

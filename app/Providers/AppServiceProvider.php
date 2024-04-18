@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use DB;
-use File;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -20,6 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+
+
         DB::listen(function($query) {
             File::append(
                 storage_path('/logs/query.log'),
@@ -33,4 +38,6 @@ class AppServiceProvider extends ServiceProvider
         });
 
     }
+
+
 }

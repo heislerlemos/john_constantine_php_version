@@ -7,20 +7,28 @@
 <br>
 <p>
 
-<h1> Nome do curso  </h1>
+<br>
+<div class="container">
+<div class="columns is-centered">
+<div class="column is-half">
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+<strong> Nome da Universidade  </strong>
 {{ $centros_de_formaco->nome }} 
 </p>
-<strong>  Vagas : </strong>
+<strong> Numero de  Vagas : </strong>
 {{ $centros_de_formaco->vagas }}
+    </div>
+  </div>
+</div>
+</div>
 <br>
-<h1> Localização : </h1><!--<iframe src="{{ $centros_de_formaco->localizacao }}"></frame>-->
-</p>
-<p>
-</p>
+<iframe src="{{ $centros_de_formaco->localizacao }}" width="1200" height="450" ></iframe>
+</div>
+</div>
 
-
-
-
+<br>
 <div class="container">
 
 <section class="hero is-link">
@@ -59,13 +67,14 @@
 </div>
 </div>
 <br>
-
+<div class="container">
 <section class="hero is-warning">
   <div class="hero-body">
     <p class="title">Admnistração</p>
     <p class="subtitle">So a administração pode submeter cursos </p>
   </div>
 </section>
+</div>
 <div class="columns is-centered" >
 <div class="column has-text-black is-half">
 <form action="{{route("centros_de_formacoes.cursos.store",$centros_de_formaco->id)}}" method="POST">
