@@ -23,6 +23,21 @@ class Centros_De_FormacoesController extends Controller
             ->with(request()->input('page'));        //
     }
 
+    public function procurar(Request $request) {
+       
+        $procurar = $request->procurar;
+        $centros_de_formacoes = Centro_de_formacao::where(function($query) use ($procurar){
+        
+        $query->where('nome', 'like', "%$procurar%");
+        })
+        ->get();
+
+        return view('centros_de_formacoes.index',compact('centros_de_formacoes'))
+            ->with(request()->input('page'));        //
+   
+     }
+
+
     /**
      * Show the form for creating a new resource.
      */

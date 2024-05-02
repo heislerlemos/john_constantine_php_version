@@ -22,3 +22,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Centros_De_FormacoesController::class, 'index']);
 Route::post('centros_de_formacoes/{centros_de_formaco}/cursos', [CursoController::class, 'store'])->name('centros_de_formacoes.cursos.store'); 
 Route::resource('centros_de_formacoes', Centros_De_FormacoesController::class);
+Route::get('/procurar', [Centros_De_FormacoesController::class, 'procurar']);
