@@ -67,15 +67,12 @@
   </div>
 
 </nav>
-
     </form>
      </head>
     <body>
         @section('sidebar')
         @show
-
-
-            @yield('content')
+        @yield('content')
 
 
     </body>

@@ -4,10 +4,9 @@
 
 <head>
 @vite(['resources/css/app.css', 'resources/js/app.js'])
-
 </head>
 <body class="has-text-centered" align="center">
-<figure class=" image is-3by1" style="width:100%">
+<figure class=" image is-3by1" style="width:100%; ;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <img src="{{ asset('img/panel.jpg') }}" alt="description of myimage">
 </figure>
 <br>
@@ -28,9 +27,9 @@
 <figure class="image image is-3by1">
 <iframe src="{{ $centro->localizacao }}" title="description" width="350" height="200"></iframe>
 </figure>
-<td>Centro Nº {{$centro->id}} : {{ $centro->nome }}</td>
+<td>Universidade :<b> {{ $centro->nome }} </b></td>
 <br>
-<td>Vagas : {{ $centro->vagas }}</td>
+<td> Nº Total de Vagas :<b> {{ $centro->vagas }} </b></td> 
 <form action="{{ route('centros_de_formacoes.destroy',$centro->id) }}" method="POST">
 <footer class="card-footer" style="border-color:lightgrey;   box-shadow: 5px 5px lightblue;">
 <a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}" type="password">Ver</a>
