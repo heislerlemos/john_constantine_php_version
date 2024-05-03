@@ -6,7 +6,9 @@
 <html>
     <head>
         <title> @yield('title')</title>
-   <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+
+ <form method="get" action="/procurar">
+ <nav class="navbar is-light" role="navigation" aria-label="main navigation">
  <div class="navbar-item"> 
 <div class="navbar-brand">
     <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
@@ -23,22 +25,20 @@
 
 </div>
     <div class="navbar-item">
- <form method="get" action="/procurar">
       <div class="field has-addons">
-        <p class="control">
-          <input class="input " type="text" name="procurar"  placeholder="Encontrar universidade" />
+        <p class="control ">
+          <input class="input" type="text" name="procurar"  placeholder="Encontrar universidade" />
         </p>
         <p class="control">
-          <button class="button">Search</button>
+          <button class="button is-link is-outlined">Search</button>
         </p>
       </div>
-    </form>
     </div>
-  
+
     <div class="navbar-item">
 <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+    <button class="button is-link is-outlined" aria-haspopup="true" aria-controls="dropdown-menu">
       <span>Universidades Disponiveis</span>
       <span class="icon is-small">
         <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -68,14 +68,15 @@
 
 </nav>
 
+    </form>
      </head>
     <body>
         @section('sidebar')
         @show
 
-        
+
             @yield('content')
-        
+
 
     </body>
 </html>
