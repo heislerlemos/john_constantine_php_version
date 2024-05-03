@@ -8,7 +8,7 @@
         <title> @yield('title')</title>
 
  <form method="get" action="/procurar">
- <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+ <nav class="navbar " role="navigation" aria-label="main navigation">
  <div class="navbar-item"> 
 <div class="navbar-brand">
     <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
