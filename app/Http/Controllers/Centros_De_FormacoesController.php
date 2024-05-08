@@ -96,7 +96,7 @@ class Centros_De_FormacoesController extends Controller
 
 
             if ($_SERVER['PHP_AUTH_PW'] == 'ula' && $_SERVER['PHP_AUTH_USER'] == 'ula') {
-                echo '<p>Access granted. You know the password!</p>';
+               # echo '<p>Access granted. You know the password!</p>';
                 return view('centros_de_formacoes.edit',
                     compact('centros_de_formaco'));
             } else {
@@ -116,7 +116,7 @@ class Centros_De_FormacoesController extends Controller
 
 
             if ($_SERVER['PHP_AUTH_PW'] == 'ugs' && $_SERVER['PHP_AUTH_USER'] == 'ugs') {
-                echo '<p>Access granted. You know the password!</p>';
+               # echo '<p>Access granted. You know the password!</p>';
                 return view('centros_de_formacoes.edit',
                     compact('centros_de_formaco'));
             } else {
