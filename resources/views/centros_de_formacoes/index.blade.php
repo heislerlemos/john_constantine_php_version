@@ -13,19 +13,25 @@
 
 <div class="container">
 <br>
-<div class="columns is-multiline ">
+<div class="columns is-centered is-multiline ">
 @foreach ($centros_de_formacoes as $centro)
-<div class="column">
+<div class="column is-one-third">
 <div class="card has-text-black has-background-light">
   <div class="card-image">
-    <figure class="image image is-3by1">
+    <figure class="image is-3by1">
       <img src="{{ $centro->imglink }}" alt="Placeholder image"/>
     </figure>
   </div>
 
   <div class="card-content">
-<figure class="image image is-3by1">
-<iframe src="{{ $centro->localizacao }}" title="description" width="350" height="200"></iframe>
+<figure class="image is-3by1">
+<iframe class="responsive-iframe" style="position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;"src="{{ $centro->localizacao }}" title="description" ></iframe>
 </figure>
 <td>Universidade :<b> {{ $centro->nome }} </b></td>
 <br>

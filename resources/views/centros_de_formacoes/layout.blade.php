@@ -12,7 +12,7 @@
  <div class="navbar-item"> 
 <div class="navbar-brand">
     <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
-    <img src="{{URL::asset('https://th.bing.com/th/id/OIP.W-rR47Apq4tHQKuGrPS3ygAAAA?rs=1&pid=ImgDetMain')}}">
+    <img src="{{URL::asset('img/home.png')}}">
      </a>
     </div>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -38,21 +38,23 @@
     <div class="navbar-item">
 <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
-    <button class="button is-link is-outlined" aria-haspopup="true" aria-controls="dropdown-menu">
-      <span>Universidades Disponiveis</span>
-      <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
+    <a aria-haspopup="true" aria-controls="dropdown-menu">
+    <img src="{{URL::asset ('img/dropdown.png')}}"  > 
+  </a>
   </div>
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
-      <a href="/procurar?procurar=Lusiada" class="dropdown-item"> Lusiada </a>
-      <a class="dropdown-item"> Unibelas </a>
-      <a href="/procurar?procurar=Ugs" class="dropdown-item"> Gregorio Semedo </a>
-      <a href="/procurar?procurar=Jean Piaget" class="dropdown-item"> Jean Piaget</a>
+      <a href="/procurar?procurar=Universidade Agostinho Neto" class="dropdown-item">Universidade Agostinho Neto </a>
+      <a href="/procurar?procurar=Universidade Catolica" class="dropdown-item"> Universidade Catolica</a>
+      <a href="/procurar?procurar=Universidade Óscar Ribras" class="dropdown-item">Universidade Óscar Ribras</a>
+      <a href="/procurar?procurar=Universidade Independente de Angola" class="dropdown-item"> Universidade Independente de Angola </a>
+      <a href="/procurar?procurar=Universidade Grégorio Semedo" class="dropdown-item" > Universidade Grégorio Semedo </a>
+      <a href="/procurar?procurar=Universidade Metodista de Angola" class="dropdown-item"> Universidade Metodista de Angola </a>
+      <a href="/procurar?procurar=Universidade Lusíadas" class="dropdown-item"> Universidade Lusíadas </a>
+      <a href="/procurar?procurar=Universidade Jean Piaget" class="dropdown-item"> Universidade Jean Piaget </a>
+      <a href="/procurar?procurar=Universidade Upra Angola" class="dropdown-item"> Universidade Upra Angola </a>        
       <hr class="dropdown-divider" />
-      <a href="/procurar?procurar=heisler" class="dropdown-item"> Outras </a>
+      <a href="/centros_de_formacoes" class="dropdown-item"> Todas </a>
     </div>
   </div>
 </div>
@@ -61,7 +63,9 @@
 
 <div class="navbar-end">
       <div class="navbar-item">
-        <a class="button is-link  is-outlined" href="{{ route('centros_de_formacoes.create') }}"> Criar novo centro</a>
+        <a href="{{route ('centros_de_formacoes.create')}}">
+        <img src="{{ URL::asset ('img/create.png')}}">
+        </a> 
       </div>
     </div>
   </div>
@@ -76,4 +80,18 @@
 
 
     </body>
+
+<footer class="footer " >
+  <div class="content has-text-centered">
+    <p>
+    Este website foi criado pela equipa John Constantine 2024 
+    patrocionado por: 
+     <hr style="background-color: white;"> 
+     <img src="{{ asset ('img/lusiada.png')}}" width="50">
+      
+      <img src="{{asset ('img/kickoff.png') }}" width="50">
+      
+    </p>
+  </div>
+</footer>       
 </html>
