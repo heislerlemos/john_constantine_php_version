@@ -5,7 +5,7 @@
 <head>
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body align="center">
 <section class="hero is-danger">
   <div class="hero-body">
     <p class="title">Editar </p>

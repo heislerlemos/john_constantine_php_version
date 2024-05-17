@@ -24,16 +24,6 @@
   </div>
 
 </div>
-    <div class="navbar-item">
-      <div class="field has-addons">
-        <p class="control ">
-          <input class="input" type="text" name="procurar"  placeholder="Encontrar universidade" />
-        </p>
-        <p class="control">
-          <button class="button is-link is-outlined">Search</button>
-        </p>
-      </div>
-    </div>
 
     <div class="navbar-item">
 <div class="dropdown is-hoverable">
@@ -59,6 +49,28 @@
   </div>
 </div>
 </div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+
+
+      <div class="navbar-item">
+       <div class="field has-addons">
+          <p class="control ">
+            <input class="input is-danger" style="width:600px"type="text" name="procurar"   placeholder="Encontrar universidade" />
+         </p>
+         <p class="control">
+            <button class="button is-danger is-outlined">Procurar</button>
+          </p>
+        </div>
+      </div>
 
 
 <div class="navbar-end">
@@ -80,18 +92,10 @@
 
 
     </body>
+<br>
+<footer>
+<img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >
+</footer>
 
-<footer class="footer " >
-  <div class="content has-text-centered">
-    <p>
-    Este website foi criado pela equipa John Constantine 2024 
-    patrocionado por: 
-     <hr style="background-color: white;"> 
-     <img src="{{ asset ('img/lusiada.png')}}" width="50">
-      
-      <img src="{{asset ('img/kickoff.png') }}" width="50">
-      
-    </p>
-  </div>
-</footer>       
+
 </html>

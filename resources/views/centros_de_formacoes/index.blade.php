@@ -6,10 +6,59 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="has-text-centered" align="center">
-<figure class=" image is-3by1" style="width:100%; ;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<img src="{{ asset('img/panel.jpg') }}" alt="description of myimage">
+<figure class="image is-3by1" style=" height:30%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<img src="{{ asset('img/banner.jpg') }}" alt="description of myimage">
 </figure>
 <br>
+<div align="center">
+<p class="title" style="border-bottom: 5px solid orange; width:25%; text-align: center;" >Universidades</p>
+</div>
+<br>
+<br>
+<div class="container">
+<div class="columns is-centered">
+<div class="column is-one-quarter">
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img
+        src="{{ asset ('img/card.jpg')}}">
+    </figure>
+  </div> 
+
+
+
+ <div class="card-content">
+    <div class="content">
+      coLorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+     nisi ut aliquip ex ea commodo consequat
+    . Duis aute irure dolor in reprehenderit in 
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.nsectetur purus sit amet fermentum.
+    </div>
+  </div>
+</div>
+</div>
+<div class="column is-half">
+<div class="card">
+<figure>
+    <img src="{{ asset ('img/card_2.jpg')  }}"
+</figure>
+
+</div>
+</div>
+</div>
+</div>
+<br>
+<section class="hero is-warning">
+  <div class="hero-body">
+  </div>
+</section>
+
+
 
 <div class="container">
 <br>
@@ -19,7 +68,7 @@
 <div class="card has-text-black has-background-light">
   <div class="card-image">
     <figure class="image is-3by1">
-      <img src="{{ $centro->imglink }}" alt="Placeholder image"/>
+      <img src="{{ $centro->imglink }}"  alt="Placeholder image"/>
     </figure>
   </div>
 
