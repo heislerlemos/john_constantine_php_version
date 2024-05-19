@@ -1,14 +1,36 @@
 
 
 
-
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 <html>
     <head>
-        <title> @yield('title')</title>
+    <style>
+body {
+background-color: #F0FFFF;
 
+}
+
+.header {
+  position:relative;
+  z-index:1000; 
+
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+    </style>
+
+        <title> @yield('title')</title>
  <form method="get" action="/procurar">
- <nav class="navbar " role="navigation" aria-label="main navigation">
+<div class="header"  id="myHeader">
+ <nav class="navbar is-transparent " style="background-color:#F0FFFF;" role="navigation"  aria-label="main navigation">
  <div class="navbar-item"> 
 <div class="navbar-brand">
     <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
@@ -23,13 +45,12 @@
     </a>
   </div>
 
-</div>
 
     <div class="navbar-item">
 <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
     <a aria-haspopup="true" aria-controls="dropdown-menu">
-    <img src="{{URL::asset ('img/dropdown.png')}}"  > 
+    <img src="{{URL::asset ('img/dropdown.png')}}" > 
   </a>
   </div>
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -64,10 +85,10 @@
       <div class="navbar-item">
        <div class="field has-addons">
           <p class="control ">
-            <input class="input is-danger" style="width:600px"type="text" name="procurar"   placeholder="Encontrar universidade" />
+            <input class="input is-warning" style="width:600px"type="text" name="procurar"   placeholder="Encontrar universidade" />
          </p>
          <p class="control">
-            <button class="button is-danger is-outlined">Procurar</button>
+            <button class="button is-warning ">Procurar</button>
           </p>
         </div>
       </div>
@@ -79,21 +100,53 @@
         <img src="{{ URL::asset ('img/create.png')}}">
         </a> 
       </div>
+    
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
     </div>
   </div>
-
 </nav>
+</div>
+
+
     </form>
-     </head>
+</div>
+
+
+</head>
+<div class="content">
     <body>
         @section('sidebar')
         @show
         @yield('content')
 
 
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+</script>
+</div>
     </body>
 <br>
-<footer>
+
+<footer style="box-shadow:0 0 5px 5px lightblue; ">
 <img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >
 </footer>
 

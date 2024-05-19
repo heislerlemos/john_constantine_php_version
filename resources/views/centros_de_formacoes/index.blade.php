@@ -4,6 +4,14 @@
 
 <head>
 @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+<style>
+html {
+    scroll-behavior: smooth;
+
+}
+
+</style>
 </head>
 <body class="has-text-centered" align="center">
 <figure class="image is-3by1" style=" height:30%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -11,7 +19,9 @@
 </figure>
 <br>
 <div align="center">
-<p class="title" style="border-bottom: 5px solid orange; width:25%; text-align: center;" >Universidades</p>
+<div id="sessao1">
+<a href="#sessao2"  class="title" style="border-bottom: 5px solid orange; width:25%; text-align: center;" >Universidades</a>
+</div>
 </div>
 <br>
 <br>
@@ -61,7 +71,7 @@
 </div>
 </div>
 <br>
-<section class="hero is-warning">
+<section class="hero is-warning" style=" height:25%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  >
   <div class="hero-body">
   </div>
 </section>
@@ -109,4 +119,8 @@
 </div>
 </div>
 </body>
+<br>
+<div id="sessao2" align="center">
+  <a class="title"  style="border-bottom: 5px solid orange; width:25%; text-align: center;" href="#sessao1">Inicio</a>
+</div>
 @endsection
