@@ -230,11 +230,15 @@ function myFunction() {
 
 </div>
 </body>
-<br>
 
-<footer style="box-shadow:0 0 5px 5px lightblue; ">
+@if (url()->current() == 'http://localhost:8080/centros_de_formacoes/create')
+<footer style="width:100%;left:0;bottom:0;box-shadow:0 0 5px 5px lightblue; position:fixed;">
 <img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >
 </footer>
-
+@else
+<footer style="width:100%;left: 0; bottom:0;box-shadow:0 0 5px 5px lightblue">
+<img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >
+ </footer>
+@endif
 
 </html>

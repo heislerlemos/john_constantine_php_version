@@ -5,9 +5,8 @@
 <br>
 <br>
 <body class="has-text-centered"  align="center">
-<div class="columns is-centered "
+<div class="columns is-mobile is-centered">
 <div class="column is-half">
-
 
 <form action="{{ route('centros_de_formacoes.store') }}" method="POST">
     @csrf
@@ -43,17 +42,14 @@
     <input class="input" type="text" placeholder="Vagas" name="vagas">
   </div>
 </div>
-
-
          <div>
-          <button class="button is-success"type="submit">Submit</button>
+          <button class="button is-success"type="submit">Submeter</button>
+          <button  class="button is-info" href="{{ route('centros_de_formacoes.index') }}"> Voltar</button>
         </div>
 
 </form>
 
-
 </div>
-<div>
-<a href="{{ route('centros_de_formacoes.index') }}"> Voltar</a>
+</div>
 </body>
 @endsection

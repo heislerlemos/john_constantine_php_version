@@ -10,7 +10,19 @@ html {
     scroll-behavior: smooth;
 
 }
+#univ:hover {
+border-bottom: 5px solid orange;
+width:25%;
+text-align:center;
+}
 
+
+#volt:hover {
+border-bottom: 5px solid orange;
+width:25%;
+text-align:center;
+
+}
 </style>
 </head>
 <body class="has-text-centered" align="center">
@@ -20,7 +32,7 @@ html {
 <br>
 <div align="center">
 <div id="sessao1">
-<a href="#sessao2"  class="title" style="border-bottom: 5px solid orange; width:25%; text-align: center;" >Universidades</a>
+<a id="univ" href="#sessao2"  class="title">Universidade</a>
 </div>
 </div>
 <br>
@@ -112,6 +124,6 @@ html {
 </body>
 <br>
 <div id="sessao2" align="center">
-  <a class="title"  style="border-bottom: 5px solid orange; width:25%; text-align: center;" href="#sessao1">Inicio</a>
+  <a class="title" id="volt"  href="#sessao1">Inicio</a>
 </div>
 @endsection
