@@ -4,30 +4,22 @@
 </head>
 
 <body class="has-text-centered" align="center">
-<br>
-<p>
 
+<!--<img src="{{asset ('img/agostinho.jpg')}}" style="width:100%;">-->
+<img src="{{$centros_de_formaco->imagemfau}}">
+<br>
 <br>
 <div class="container">
 <div class="columns is-centered">
 <div class="column is-half">
-<div class="card">
-  <div class="card-content">
-    <div class="content">
-<strong> Nome da Universidade  </strong>
-{{ $centros_de_formaco->nome }} 
-</p>
-<strong> Numero de  Vagas : </strong>
-{{ $centros_de_formaco->vagas }}
-    </div>
-  </div>
-</div>
+
+<img src="{{ asset ('img/avatar.png')}}">
 </div>
 <br>
 <iframe src="{{ $centros_de_formaco->localizacao }}" width="1200" height="450" ></iframe>
 </div>
 </div>
-
+</div>
 <br>
 <div class="container">
 

@@ -15,6 +15,7 @@ class Centro_de_formacao extends Model
         'localizacao',
         'vagas',
         'imglink',
+        'imagemfau',
     ];
 
     
