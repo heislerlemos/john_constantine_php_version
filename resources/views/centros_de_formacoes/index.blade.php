@@ -14,7 +14,7 @@ html {
 </style>
 </head>
 <body class="has-text-centered" align="center">
-<figure class="image is-3by1" style=" height:30%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<figure class="image is-3by1" style=" height:35%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <img src="{{ asset('img/banner.jpg') }}" alt="description of myimage">
 </figure>
 <br>
@@ -71,7 +71,7 @@ html {
 </div>
 </div>
 <br>
-<section class="hero is-warning" style=" height:25%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  >
+<section class="hero is-warning" style=" height:25%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  >
   <div class="hero-body">
   </div>
 </section>
@@ -91,20 +91,11 @@ html {
   </div>
 
   <div class="card-content">
-<figure class="image is-3by1">
-<iframe class="responsive-iframe" style="position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;"src="{{ $centro->localizacao }}" title="description" ></iframe>
-</figure>
 <td>Universidade :<b> {{ $centro->nome }} </b></td>
 <br>
 <td> Nº Total de Vagas :<b> {{ $centro->vagas }} </b></td> 
 <form action="{{ route('centros_de_formacoes.destroy',$centro->id) }}" method="POST">
-<footer class="card-footer" style="border-color:lightgrey;   box-shadow: 5px 5px lightblue;">
+<footer class="card-footer" style="border-color:lightgrey;   box-shadow: 5px 5px orange;">
 <a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}" type="password">Ver</a>
 @csrf
 @method('DELETE')

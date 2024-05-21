@@ -5,8 +5,9 @@
 <html>
     <head>
     <style>
+
 body {
-background-color: #F0FFFF;
+background-color: white;
 
 }
 
@@ -25,24 +26,77 @@ background-color: #F0FFFF;
   padding-top: 102px;
 }
 
-    </style>
+.navbarmobile {
+display:none;
 
-        <title> @yield('title')</title>
+}
+
+@media screen and (max-width: 1020px) {
+ br {
+    display:none;
+
+    }
+
+  .navbar {
+    display:none; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .navbarmobile {
+    display:block;
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+
+}
+
+
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> @yield('title')</title>
+
+<!---Navbar responsivo --->
+
+
+<div class="navbarmobile">
+
+<ul>
+  <li><a class="active" href="{{route('centros_de_formacoes.index')}}">Inicio</a></li>
+  <li><a href="{{route ('centros_de_formacoes.create')}}">Criar</a></li>
+<ul>
+</div>
+<!-- Navbar normal --> :
  <form method="get" action="/procurar">
 <div class="header"  id="myHeader">
- <nav class="navbar is-transparent " style="background-color:#F0FFFF;" role="navigation"  aria-label="main navigation">
+ <nav class="navbar is-mobile is-transparent " style="background-color:#F0FFFF;" role="navigation"  aria-label="main navigation">
  <div class="navbar-item"> 
 <div class="navbar-brand">
     <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
     <img src="{{URL::asset('img/home.png')}}">
      </a>
     </div>
-    <a  role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
   </div>
 
 
@@ -85,7 +139,7 @@ background-color: #F0FFFF;
       <div class="navbar-item">
        <div class="field has-addons">
           <p class="control ">
-            <input class="input is-warning" style="width:600px"type="text" name="procurar"   placeholder="Encontrar universidade" />
+            <input class="input is-warning" style="width:600px;"type="text" name="procurar"   placeholder="Encontrar universidade" />
          </p>
          <p class="control">
             <button class="button is-warning ">Procurar</button>
@@ -100,7 +154,7 @@ background-color: #F0FFFF;
         <img src="{{ URL::asset ('img/create.png')}}">
         </a> 
       </div>
-    
+
     <div class="navbar-item"></div>
     <div class="navbar-item"></div>
     <div class="navbar-item"></div>
@@ -135,23 +189,23 @@ background-color: #F0FFFF;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-  // Add a click event on each of them
-  $navbarBurgers.forEach( el => {
-    el.addEventListener('click', () => {
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+el.addEventListener('click', () => {
 
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
+// Get the target from the "data-target" attribute
+const target = el.dataset.target;
+const $target = document.getElementById(target);
 
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
+// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+el.classList.toggle('is-active');
+$target.classList.toggle('is-active');
 
-    });
-  });
+});
+});
 
 });
 
@@ -172,8 +226,10 @@ function myFunction() {
     }
 }
 </script>
+
+
 </div>
-    </body>
+</body>
 <br>
 
 <footer style="box-shadow:0 0 5px 5px lightblue; ">

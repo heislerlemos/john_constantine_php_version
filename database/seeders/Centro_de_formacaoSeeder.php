@@ -40,14 +40,14 @@ class Centro_de_formacaoSeeder extends Seeder
                 'nome' => 'Universidade Independente de Angola',
                 'localizacao' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.9030941021415!2d13.181888175144117!3d-8.888601491167165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f4c84736a611%3A0xef01a7202056e079!2sUniversidade%20Independente%20de%20Angola!5e0!3m2!1spt-PT!2sao!4v1715177645456!5m2!1spt-PT!2sao',
                 'vagas' => 800,
-                'imagemfau' => 'upra.jpg'
+                'imagemfau' => 'unia.jpg'
             ],
             [         
                 'imglink' => 'https://th.bing.com/th/id/R.5aeff1c25c69065a4adab591ae689b6c?rik=5Qs%2bZSkVhRxRog&riu=http%3a%2f%2f4.bp.blogspot.com%2f-BDIGiGS8JrY%2fUcdzKQwK6iI%2fAAAAAAAAAGo%2fNWsF8slq-40%2fs1600%2fUNIVERSIDADE%2bGREG%2525C3%252593RIO%2bSEMEDO.jpg&ehk=w8KH47qPQsu4fS7B1ONFLJuBVgeDpnnW3YqFNMAlDN4%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
                 'nome' => 'Universidade Grégorio Semedo',
                 'localizacao' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.7888580851645!2d13.198279575144342!3d-8.899212291157028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f4e65d2c8b99%3A0xa3d8c59ca5e748cb!2sUniversidade%20Greg%C3%B3rio%20Semedo!5e0!3m2!1spt-PT!2sao!4v1715177917569!5m2!1spt-PT!2sao',
                 'vagas' => 400,
-                'imagemfau' => 'semedo.jpg',
+                'imagemfau' => 'gregorio.jpg',
 
             ],
             [
