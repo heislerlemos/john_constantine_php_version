@@ -19,7 +19,7 @@ class Centro_de_formacaoSeeder extends Seeder
                 'nome' => 'Universidade Agostinho Neto',
                 'localizacao' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126145.41399168564!2d13.153796942685258!3d-8.875478701752817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f6173234f65d%3A0x9d83c5c51df34c9a!2sCampus%20Universit%C3%A1rio%20Universidade%20Agostinho%20Neto!5e0!3m2!1spt-PT!2sao!4v1715173316305!5m2!1spt-PT!2sao',
                 'vagas' => 5570 ,
-                'imagemfau' => 'https://drive.google.com/file/d/1QlOatmnOKPuSNAvbY0eT36MSoAUioiUe/view?usp=sharing', 
+                'imagemfau' => 'agostinho.jpg', 
             ], 
             [
                 'imglink' => 'https://agencia.ecclesia.pt/portal/wp-content/uploads/2021/02/UCP_Lisboa_Biblioteca.jpg',
@@ -69,7 +69,7 @@ class Centro_de_formacaoSeeder extends Seeder
                 'nome' => 'Universidade Jean Piaget',
                 'localizacao' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.70105778046!2d13.3983363751444!3d-8.90735909114921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f85656f8de85%3A0x56d2db07c0880ca7!2sJean%20Piaget%20University%20-%20Angola!5e0!3m2!1sen!2sao!4v1715179206562!5m2!1sen!2sao',
                 'vagas' => 589,
-                'imagemfau' => 'piaget.jpg'
+                'imagemfau' => 'jean.jpg'
             ],
 
             [

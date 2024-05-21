@@ -4,9 +4,8 @@
 </head>
 
 <body class="has-text-centered" align="center">
-
-<!--<img src="{{asset ('img/agostinho.jpg')}}" style="width:100%;">-->
-<img src="{{$centros_de_formaco->imagemfau}}">
+<img src="<?php echo asset("img/{$centros_de_formaco->imagemfau}")?>" style="width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<br>
 <br>
 <br>
 <div class="container">
