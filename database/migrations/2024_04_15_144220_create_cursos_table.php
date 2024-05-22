@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('centro_de_formacao_id');
             $table->string('cadeiras');            
             $table->date('data');
-            $table->longtext('horario');
+            $table->longtext('documentos');
             $table->integer('tempo_de_duracao');
             $table->integer('precario');
             $table->timestamps();

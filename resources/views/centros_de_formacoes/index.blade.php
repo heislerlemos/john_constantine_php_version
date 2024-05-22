@@ -6,6 +6,9 @@
 
 <head>
 @vite(['resources/css/app.css', 'resources/js/app.js'])
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--- inicio do estilos -->
 
 <style>
 html {
@@ -25,7 +28,19 @@ width:25%;
 text-align:center;
 
 }
+
+
+@media screen and (max-width: 1020px) 
+{
+
+
+}
 </style>
+
+
+
+<!--  Fim do estilos -->
+
 </head>
 <body class="has-text-centered" align="center">
 <figure class="image is-3by1" style=" height:35%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">

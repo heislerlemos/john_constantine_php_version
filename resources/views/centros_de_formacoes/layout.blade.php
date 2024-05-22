@@ -34,14 +34,18 @@ display:none;
   .navbar {
     display:none; /* The width is 100%, when the viewport is 800px or smaller */
   }
-
+  
   .navbarmobile {
     display:block;
   }
 ul {
   list-style-type: none;
   margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 10.5%;
   padding: 0;
+  z-index:1000;
   overflow: hidden;
   background-color: #333;
 }
@@ -62,10 +66,13 @@ li a:hover {
   background-color: #111;
 }
 
-
-
 }
 </style>
+
+
+<!--- Estes estilos irão ir para o directorio css -->
+
+
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 @vite(['resources/css/app.css', 'resources/js/app.js'])

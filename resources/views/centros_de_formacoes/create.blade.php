@@ -12,26 +12,26 @@
     @csrf
 
 <div class="field">
-  <label class="label">Nome do Curso </label>
+  <label class="label">Nome da universidade </label>
   <div class="control">
-    <input class="input " type="text" name="nome" placeholder="Insira o nome da universidade">
+    <input class="input is-success " type="text" name="nome" placeholder="Insira o nome da universidade">
   </div>
 </div>
 
 
 
 <div class="field">
-  <label class="label">Image do curso</label>
+  <label class="label">Imagem da  universidade</label>
   <div class="control">
-    <input class="input" type="text" name="imglink" placeholder="Insira a imagem do curso">
+    <input class="input is-danger" type="text" name="imglink" placeholder="Insira a imagem do curso">
   </div>
 </div>
 
 
 <div class="field">
-<label class="label"> Localização </label>
+<label class="label"> Mapa </label>
 <div class="control">
-<input class="input" type="text"  name="localizacao" placeholder="insira a localização ">
+<input class="input is-info" type="text"  name="localizacao" placeholder="insira a localização ">
 </div>
 </div>
 

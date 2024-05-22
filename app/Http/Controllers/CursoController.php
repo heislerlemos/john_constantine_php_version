@@ -16,7 +16,7 @@ $curso = new Curso();
 $curso->centro_de_formacao_id = $centros_de_formaco->id;
 $curso->cadeiras = request()->get('cadeiras');
 $curso->data = request()->get('data');
-$curso->horario = request()->get('horario');
+$curso->documentos = request()->get('documentos');
 $curso->tempo_de_duracao = request()->get('tempo_de_duracao');
 $curso->precario = request()->get('precario');
 $curso->save();

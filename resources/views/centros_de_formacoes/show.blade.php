@@ -1,8 +1,5 @@
 @extends('centros_de_formacoes.layout')
 @section('content')
-<head> 
-</head>
-
 <body class="has-text-centered" align="center">
 <img src="<?php echo asset("img/{$centros_de_formaco->imagemfau}")?>" style="width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <br>
@@ -14,7 +11,7 @@
 
 <img src="{{ asset ('img/avatar.png')}}">
 </div>
-<div class="column">
+<div class="column is-half">
 <p class="title" style="color: orange; "> Localização </p>
 <br>
 <iframe src="{{ $centros_de_formaco->localizacao }}" width="650" height="500" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" ></iframe>
@@ -27,7 +24,7 @@
 
 <section class="hero is-link">
   <div class="hero-body">
-    <p class="title">Cursos</p>
+    <p class="title">Cursos de Licenciaturas </p>
     <p class="subtitle">Lista dos cursos disponiveis e actulizados até a data de hoje</p>
   </div>
 </section>
@@ -40,19 +37,70 @@
 
 <div class="card ">
   <div class="card-content  has-text-centered ">
-    <div class="content">
-<p>Nº : {{ $curso->id}} </p>
-   </div>
 <div class="content"> 
 <h6> Curso :  {{ $curso->cadeiras}} </h6>
 </div>
 <div class="content">
-<p> Data : {{ $curso->data }} </p>
+<p> Data de inicio  {{ $curso->data }} </p>
 </div>
+
+<hr>
+  <div class="content">
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+       <button class="button is-success" style="color:white;" aria-haspopup="true" aria-controls="dropdown-menu3">   
+      <span>Aulas </span>
+     </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+        <img src="https://drive.google.com/thumbnail?id=1z6wr7IEDwWckV4gihBMO1pP4EdgTq0IG" style="width:500px;">
+        </div>
+     </div>
+    </div>                                                                                                                                                                                 
+     </div>
+  </div>
+ 
+
+
+
+
+
 <div class="content">
-<p > Horario : {{$curso->horario }}</p>
+<div class="dropdown is-hoverable">
+  <div class="dropdown-trigger">
+     <button class="button is-primary" style="color:white;" aria-haspopup="true" aria-controls="dropdown-menu2">
+      <span>Documentos necessario de matricula </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+    <div class="dropdown-content">
+      <div class="dropdown-item">
+        <p>
+         {{ $curso -> documentos }}
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
-   
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<div class="content">
+<p> Tempo de Duração : {{ $curso ->  tempo_de_duracao }} Anos
+</div>  
+
+<div class="content">
+<p> Proprina : {{ $curso ->  precario }} mil kwanzas
+</div> 
   </div>
 </div>
 
@@ -103,9 +151,9 @@
 </div>
 
 <div class="field">
-  <label class="label">Horario</label>
+  <label class="label">Documentos</label>
   <div class="control">
-    <textarea class="textarea" name="horario" placeholder="Insira as informações do curso" value="{{$centros_de_formaco->horario}}"></textarea>
+    <textarea class="textarea" name="documentos" placeholder="Insira as informações do curso" value="{{$centros_de_formaco->documentos}}"></textarea>
   </div>
 </div>
 
