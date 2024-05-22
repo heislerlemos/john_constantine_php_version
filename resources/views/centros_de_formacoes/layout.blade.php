@@ -1,10 +1,8 @@
 
 
-
-@vite(['resources/css/app.css', 'resources/js/app.js'])
 <html>
-    <head>
-    <style>
+
+<style>
 
 body {
 background-color: white;
@@ -32,10 +30,6 @@ display:none;
 }
 
 @media screen and (max-width: 1020px) {
- br {
-    display:none;
-
-    }
 
   .navbar {
     display:none; /* The width is 100%, when the viewport is 800px or smaller */
@@ -71,37 +65,40 @@ li a:hover {
 
 
 }
-
-
-    </style>
+</style>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title> @yield('title')</title>
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+<title> @yield('title')</title>
 
 <!---Navbar responsivo --->
 
 
 <div class="navbarmobile">
-
 <ul>
   <li><a class="active" href="{{route('centros_de_formacoes.index')}}">Inicio</a></li>
   <li><a href="{{route ('centros_de_formacoes.create')}}">Criar</a></li>
-<ul>
+</ul>
 </div>
+
+
 <!-- Navbar normal --> :
- <form method="get" action="/procurar">
-<div class="header"  id="myHeader">
- <nav class="navbar is-mobile is-transparent " style="background-color:#F0FFFF;" role="navigation"  aria-label="main navigation">
- <div class="navbar-item"> 
-<div class="navbar-brand">
+<form method="get" action="/procurar">
+ <div class="header"  id="myHeader">
+   <nav class="navbar is-dark" style="position: fixed;top: 0px; width:100%;" role="navigation"  aria-label="main navigation">
+
+
+<div class="navbar-item"> 
+ <div class="navbar-brand">
     <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
     <img src="{{URL::asset('img/home.png')}}">
-     </a>
-    </div>
-  </div>
+    </a>
+</div>
+</div>
 
 
-    <div class="navbar-item">
-<div class="dropdown is-hoverable">
+<div class="navbar-item">
+ <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
     <a aria-haspopup="true" aria-controls="dropdown-menu">
     <img src="{{URL::asset ('img/dropdown.png')}}" > 
@@ -122,7 +119,7 @@ li a:hover {
       <a href="/centros_de_formacoes" class="dropdown-item"> Todas </a>
     </div>
   </div>
-</div>
+ </div>
 </div>
     <div class="navbar-item"></div>
     <div class="navbar-item"></div>
@@ -149,31 +146,23 @@ li a:hover {
 
 
 <div class="navbar-end">
-      <div class="navbar-item">
+ <div class="navbar-item">
         <a href="{{route ('centros_de_formacoes.create')}}">
         <img src="{{ URL::asset ('img/create.png')}}">
         </a> 
-      </div>
-
-    <div class="navbar-item"></div>
-    <div class="navbar-item"></div>
-    <div class="navbar-item"></div>
-    <div class="navbar-item"></div>
-    <div class="navbar-item"></div>
-    </div>
-  </div>
-</nav>
+ </div>
 </div>
-
-
-    </form>
-</div>
-
+  </nav>
+ </div>
+</form>
+<br>
 
 </head>
+
+
+
 <div class="content">
     <body>
-        @section('sidebar')
         @show
         @yield('content')
 
@@ -182,25 +171,21 @@ li a:hover {
 
 
 
+<!--- Javacript codigo -->
+
 <script>
-
-
 /*** navbar burger menu **/
 
 document.addEventListener('DOMContentLoaded', () => {
 
-// Get all "navbar-burger" elements
 const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-// Add a click event on each of them
 $navbarBurgers.forEach( el => {
 el.addEventListener('click', () => {
 
-// Get the target from the "data-target" attribute
 const target = el.dataset.target;
 const $target = document.getElementById(target);
 
-// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
 el.classList.toggle('is-active');
 $target.classList.toggle('is-active');
 
@@ -231,7 +216,7 @@ function myFunction() {
 </div>
 </body>
 
-@if (url()->current() == 'http://localhost:8080/centros_de_formacoes/create')
+@if (url()->current() == 'http://localhost:8080/centros_de_formacoes/create' || url()->current() == 'http://localhost:8080/centros_de_formacoes/1/edit')
 <footer style="width:100%;left:0;bottom:0;box-shadow:0 0 5px 5px lightblue; position:fixed;">
 <img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >
 </footer>
@@ -240,5 +225,4 @@ function myFunction() {
 <img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >
  </footer>
 @endif
-
 </html>

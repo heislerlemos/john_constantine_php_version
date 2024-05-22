@@ -1,6 +1,8 @@
 
+
 @extends('centros_de_formacoes.layout')
 @section('content')
+
 
 <head>
 @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -39,7 +41,7 @@ text-align:center;
 <br>
 <div class="container">
 <div class="columns is-centered">
-<div class="column is-one-quarter">
+<div class="column is-one-third">
 <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
@@ -52,14 +54,7 @@ text-align:center;
 
  <div class="card-content">
     <div class="content">
-      coLorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-     nisi ut aliquip ex ea commodo consequat
-    . Duis aute irure dolor in reprehenderit in 
-    voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-    laborum.nsectetur purus sit amet fermentum.
+      O nosso objectivo é ajudar os estudantes a encontrar informações sobre instituições de ensino superior <hr>
     </div>
   </div>
 </div>
@@ -83,8 +78,11 @@ text-align:center;
 </div>
 </div>
 <br>
-<section class="hero is-warning" style=" height:25%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  >
+<br>
+<section class="hero is-warning" style=" height:20%; width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  >
   <div class="hero-body">
+ <p class="title">Lista corrente</p>
+    <p class="subtitle">Veja as informações mais atualizadas das nossas universidades 2024/2025</p>
   </div>
 </section>
 

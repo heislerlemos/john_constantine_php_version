@@ -14,8 +14,11 @@
 
 <img src="{{ asset ('img/avatar.png')}}">
 </div>
+<div class="column">
+<p class="title" style="color: orange; "> Localização </p>
 <br>
-<iframe src="{{ $centros_de_formaco->localizacao }}" width="1200" height="500" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" ></iframe>
+<iframe src="{{ $centros_de_formaco->localizacao }}" width="650" height="500" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" ></iframe>
+</div>
 </div>
 </div>
 </div>
