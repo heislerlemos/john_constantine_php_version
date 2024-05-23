@@ -79,7 +79,7 @@
 
    <div class="modal-content">
 
-  <img src="<?php echo asset("img/{$curso -> cadeiras }")?>">
+  <img src="<?php echo asset("img/{$curso -> semestre }")?>">
    </div>
 
    <button class="modal-close is-large" aria-label="close"></button>
@@ -146,6 +146,14 @@
     <textarea class="textarea" name="documentos" placeholder="Insira as informações do curso" value="{{$centros_de_formaco->documentos}}"></textarea>
   </div>
 </div>
+
+<div class="field">
+<label class="label">Semestre</label>
+<div class="control">
+<input class="input is-danger" type="text" name="semestre" value="{{$centros_de_formaco -> semestre  }}">
+</div>
+</div>
+
 
 <div class="field is-grouped">
   <div class="control">

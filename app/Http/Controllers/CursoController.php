@@ -19,6 +19,7 @@ $curso->data = request()->get('data');
 $curso->documentos = request()->get('documentos');
 $curso->tempo_de_duracao = request()->get('tempo_de_duracao');
 $curso->precario = request()->get('precario');
+$curso->semestre = request()->get('semestre');
 $curso->save();
 
 return redirect()->route('centros_de_formacoes.show', $centros_de_formaco->id);

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->longtext('documentos');
             $table->integer('tempo_de_duracao');
             $table->integer('precario');
-            
+            $table->longtext('semestre');            
             $table->timestamps();
         });
     }
