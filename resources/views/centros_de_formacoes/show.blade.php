@@ -1,5 +1,7 @@
 @extends('centros_de_formacoes.layout')
 @section('content')
+
+
 <body class="has-text-centered" align="center">
 <img src="<?php echo asset("img/{$centros_de_formaco->imagemfau}")?>" style="width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <br>
@@ -43,28 +45,11 @@
 <div class="content">
 <p> Data de inicio  {{ $curso->data }} </p>
 </div>
-
-<hr>
-  <div class="content">
-  <div class="dropdown is-hoverable">
-    <div class="dropdown-trigger">
-       <button class="button is-success" style="color:white;" aria-haspopup="true" aria-controls="dropdown-menu3">   
-      <span>Aulas </span>
-     </button>
-    </div>
-    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-      <div class="dropdown-content">
-        <div class="dropdown-item">
-        <img src="https://drive.google.com/thumbnail?id=1z6wr7IEDwWckV4gihBMO1pP4EdgTq0IG" style="width:500px;">
-        </div>
-     </div>
-    </div>                                                                                                                                                                                 
-     </div>
-  </div>
- 
-
-
-
+<div class="content">
+<button class="js-modal-trigger is-info" data-target="modal-js-example">
+  Documentos Necessarios
+</button>
+</div>
 
 
 <div class="content">
@@ -85,11 +70,6 @@
   </div>
 </div>
 </div>
-
-
-
-
-
 
 
 <hr>
@@ -165,5 +145,65 @@
 </div>
 </div>
 </div>
+
+
+<div id="modal-js-example" class="modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    
+    <img src="https://isced.ed.ao/wp-content/uploads/2023/01/lp_tab_1.png">
+  </div>
+
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add('is-active');
+  }
+
+  function closeModal($el) {
+    $el.classList.remove('is-active');
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+  // Add a click event on buttons to open a specific modal
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    if(event.key === "Escape") {
+      closeAllModals();
+    }
+  });
+});
+
+</script>
+
 </body>
+
+
 @endsection
