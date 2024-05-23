@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             //$table->foreignId('centros_de_formacaos_id')->constrained()->cascadeOnDelete();
             $table->integer('centro_de_formacao_id');
-            $table->string('cadeiras');            
+            $table->longtext('cadeiras');            
             $table->date('data');
             $table->longtext('documentos');
             $table->integer('tempo_de_duracao');
             $table->integer('precario');
+            
             $table->timestamps();
         });
     }

@@ -29,6 +29,7 @@ display:none;
 
 }
 
+
 @media screen and (max-width: 1020px) {
 
   .navbar {
@@ -93,14 +94,19 @@ li a:hover {
 <form method="get" action="/procurar">
  <div class="header"  id="myHeader">
    <nav class="navbar is-dark" style="position: fixed;top: 0px; width:100%;" role="navigation"  aria-label="main navigation">
+<div class="navbar-brand">
+<div class="navbar-item">
+<a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
+<img src="{{ URL::asset ('img/logo_site.png')}}">
+</a>
+</div>
+</div>
 
 
 <div class="navbar-item"> 
- <div class="navbar-brand">
     <a class="navbar-item" href="{{route('centros_de_formacoes.index')}}">
     <img src="{{URL::asset('img/home.png')}}">
     </a>
-</div>
 </div>
 
 
@@ -162,8 +168,6 @@ li a:hover {
   </nav>
  </div>
 </form>
-<br>
-
 </head>
 
 

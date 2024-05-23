@@ -3,7 +3,7 @@
 
 
 <body class="has-text-centered" align="center">
-<img src="<?php echo asset("img/{$centros_de_formaco->imagemfau}")?>" style="width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<img src="<?php echo asset("img/{$centros_de_formaco->imagemfau}")?>" style=" width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <br>
 <br>
 <br>
@@ -47,28 +47,17 @@
 </div>
 <div class="content">
 <button class="js-modal-trigger is-info" data-target="modal-js-example">
-  Documentos Necessarios
+  Cadeiras Anuais 
 </button>
 </div>
 
 
 <div class="content">
-<div class="dropdown is-hoverable">
-  <div class="dropdown-trigger">
-     <button class="button is-primary" style="color:white;" aria-haspopup="true" aria-controls="dropdown-menu2">
-      <span>Documentos necessario de matricula </span>
-    </button>
-  </div>
-  <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-    <div class="dropdown-content">
-      <div class="dropdown-item">
-        <p>
-         {{ $curso -> documentos }}
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+<button class="js-modal-trigger" data-target="modal-js-example-2">
+  Documentos de matricula
+</button>
+
+
 </div>
 
 
@@ -85,6 +74,27 @@
 </div>
 
 </div>
+ <div id="modal-js-example" class="modal">
+   <div class="modal-background"></div>
+
+   <div class="modal-content">
+
+  <img src="<?php echo asset("img/{$curso -> cadeiras }")?>">
+   </div>
+
+   <button class="modal-close is-large" aria-label="close"></button>
+ </div>
+
+ <div id="modal-js-example-2" class="modal">
+   <div class="modal-background"></div>
+
+   <div class="modal-content">
+  <img src="<?php echo asset("img/{$curso -> documentos }")?>">
+   </div>
+   <button class="modal-close is-large" aria-label="close"></button>
+ </div>
+
+
 @endforeach
 </div>
 </div>
@@ -147,16 +157,6 @@
 </div>
 
 
-<div id="modal-js-example" class="modal">
-  <div class="modal-background"></div>
-
-  <div class="modal-content">
-    
-    <img src="https://isced.ed.ao/wp-content/uploads/2023/01/lp_tab_1.png">
-  </div>
-
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal
