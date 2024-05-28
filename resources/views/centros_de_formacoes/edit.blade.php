@@ -6,12 +6,15 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body align="center">
+
+<div class="container">
 <section class="hero is-danger">
   <div class="hero-body">
     <p class="title">Editar </p>
     <p class="subtitle">So pessoas autorizadas podem editar </p>
   </div>
 </section>
+</div>
 <br>
 <div class="columns is-centered"
 <div class="column">

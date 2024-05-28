@@ -226,11 +226,25 @@ function myFunction() {
 }
 </script>
 
-
 </div>
 </body>
 
-@if (url()->current() == 'http://localhost:8080/centros_de_formacoes/create' || url()->current() == 'http://localhost:8080/centros_de_formacoes/1/edit')
+
+
+
+<!--- Isto têm que ser refaturador-->
+@if (
+ url()->current() == 'http://localhost:8080/centros_de_formacoes/create'
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/1/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/2/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/3/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/4/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/5/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/6/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/7/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/8/edit"
+ || url()->current() == "http://localhost:8080/centros_de_formacoes/9/edit")
+
 <footer style="width:100%;left:0;bottom:0;box-shadow:0 0 5px 5px lightblue; position:fixed;">
 <img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >
 </footer>
