@@ -124,7 +124,7 @@ text-align:center;
 <a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.show',$centro->id) }}" type="password">Ver</a>
 @csrf
 @method('DELETE')
-<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="{{ route('centros_de_formacoes.edit',$centro->id) }}"  required> Editar </a>
+<a class="card-footer-item" style="border-color:lightgrey; color:black;" href="centros_de_formacoes/{{$centro->id}}/edit"  required> Editar </a>
 <!--<a type="submit" class="card-footer-item" style="color:black;"> Apagar </a> -->
 </footer>
 </form>
