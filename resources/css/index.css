@@ -1,0 +1,19 @@
+html {
+    scroll-behavior: smooth;
+
+}
+#univ:hover {
+border-bottom: 5px solid orange;
+width:25%;
+text-align:center;
+}
+
+
+#volt:hover {
+border-bottom: 5px solid orange;
+width:25%;
+text-align:center;
+
+}
+
+

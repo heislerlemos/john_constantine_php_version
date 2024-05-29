@@ -43,7 +43,23 @@ class Centros_De_FormacoesController extends Controller
      */
     public function create()
     {
-        return view('centros_de_formacoes.create');
+               if (!isset($_SERVER['PHP_AUTH_USER'])) {
+            header('WWW-Authenticate: Basic realm="My Website"');
+            header('HTTP/1.0 401 Unauthorized');
+            echo '<p>🤚 Não pode aceder esta pagina porque não acesso a esta universidade se persistir será reportado  </p>';
+            exit; 
+        }
+
+            
+        if ($_SERVER['PHP_AUTH_PW'] == 'ula' && $_SERVER['PHP_AUTH_USER'] == 'ula') {
+            echo '<p>Access granted. You know the password!</p>';
+         return view('centros_de_formacoes.create');
+        } else {
+            echo '<p>🤚 Não pode aceder esta pagina porque não acesso a esta universidade se persistir será reportado  </p>';
+        } 
+
+
+
     }
 
     /**

@@ -26,6 +26,7 @@ Route::resource('centros_de_formacoes', Centros_De_FormacoesController::class) -
 ]);
 
 
+Route::put('centros_de_formacoes/{centros_de_formaco}/cursos', [CursoController::class, 'update'])->name('centros_de_formacoes.cursos.store'); 
 Route::get('/procurar', [Centros_De_FormacoesController::class, 'procurar']);
 Route::get('centros_de_formacoes/{centros_de_formaco}/edit', [EdicaoController::class, 'estudanteid'] );
 

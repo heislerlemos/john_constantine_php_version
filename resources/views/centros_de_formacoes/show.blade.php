@@ -1,7 +1,11 @@
 @extends('centros_de_formacoes.layout')
 @section('content')
+<head>
+@vite(['resources/css/app.css', 'resources/js/app.js' , 
+        'resources/js/show.js', 
+        'resources/css/show.css'])
 
-
+</head>
 <body class="has-text-centered" align="center">
 <img src="<?php echo asset("img/{$centros_de_formaco->imagemfau}")?>" style=" width:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <br>
@@ -39,6 +43,10 @@
 
 <div class="card ">
   <div class="card-content  has-text-centered ">
+
+<div class="content">
+<p> Curso id  {{ $curso->id }} </p>
+</div>
 <div class="content"> 
 <h6> Curso :  {{ $curso->cadeiras}} </h6>
 </div>
@@ -113,6 +121,9 @@
 @csrf <!-- {{ csrf_field() }} -->
 
 <div class="field">
+
+
+
   <label class="label">Cursos</label>
   <div class="control">
     <input class="input" type="text" placeholder="Text " name="cadeiras"  value="{{$centros_de_formaco->cadeiras}}">
@@ -143,7 +154,7 @@
 <div class="field">
   <label class="label">Documentos</label>
   <div class="control">
-    <textarea class="textarea" name="documentos" placeholder="Insira as informações do curso" value="{{$centros_de_formaco->documentos}}"></textarea>
+    <input class="input is-info" name="documentos" placeholder="Insira o nome do documento " value="{{$centros_de_formaco->documentos}}" type="text">
   </div>
 </div>
 
@@ -157,7 +168,7 @@
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link " type="submit"> Publicar o curso </button>
+    <button class="button is-warning  " type="submit"> Publicar o curso </button>
   </div>
 </form>
 </div>
@@ -165,51 +176,6 @@
 </div>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Functions to open and close a modal
-  function openModal($el) {
-    $el.classList.add('is-active');
-  }
-
-  function closeModal($el) {
-    $el.classList.remove('is-active');
-  }
-
-  function closeAllModals() {
-    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-      closeModal($modal);
-    });
-  }
-
-  // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-    const modal = $trigger.dataset.target;
-    const $target = document.getElementById(modal);
-
-    $trigger.addEventListener('click', () => {
-      openModal($target);
-    });
-  });
-
-  // Add a click event on various child elements to close the parent modal
-  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-    const $target = $close.closest('.modal');
-
-    $close.addEventListener('click', () => {
-      closeModal($target);
-    });
-  });
-
-  // Add a keyboard event to close all modals
-  document.addEventListener('keydown', (event) => {
-    if(event.key === "Escape") {
-      closeAllModals();
-    }
-  });
-});
-
-</script>
 
 </body>
 

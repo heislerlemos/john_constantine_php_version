@@ -1,85 +1,11 @@
 
 
 <html>
-
-<style>
-br {
-line-height:20px;
-
-}
-body {
-background-color: white;
-
-}
-
-.header {
-  position:relative;
-  z-index:1000; 
-
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 102px;
-}
-
-.navbarmobile {
-display:none;
-
-}
-
-
-@media screen and (max-width: 1020px) {
-
-  .navbar {
-    display:none; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  
-  .navbarmobile {
-    display:block;
-  }
-ul {
-  list-style-type: none;
-  margin: 0;
-  position: fixed;
-  width: 100%;
-  height: 10.5%;
-  padding: 0;
-  z-index:1000;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-}
-</style>
-
-
-<!--- Estes estilos irão ir para o directorio css -->
-
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+@vite(['resources/css/layout.css', 'resources/js/layout.js', 'resources/css/app.css', 'resources/js/app.js'])
+
+
 <title> @yield('title')</title>
 
 <!---Navbar responsivo --->
@@ -183,49 +109,6 @@ li a:hover {
 
 
 
-
-
-<!--- Javacript codigo -->
-
-<script>
-/*** navbar burger menu **/
-
-document.addEventListener('DOMContentLoaded', () => {
-
-const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-$navbarBurgers.forEach( el => {
-el.addEventListener('click', () => {
-
-const target = el.dataset.target;
-const $target = document.getElementById(target);
-
-el.classList.toggle('is-active');
-$target.classList.toggle('is-active');
-
-});
-});
-
-});
-
-
-
-/** stiky navbar **/
-
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-}
-</script>
-
 </div>
 </body>
 
@@ -233,17 +116,7 @@ function myFunction() {
 
 
 <!--- Isto têm que ser refaturador-->
-@if (
- url()->current() == 'http://localhost:8080/centros_de_formacoes/create'
- || url()->current() == "http://localhost:8080/centros_de_formacoes/1/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/2/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/3/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/4/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/5/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/6/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/7/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/8/edit"
- || url()->current() == "http://localhost:8080/centros_de_formacoes/9/edit")
+@if (url()->current() == 'http://localhost:8080/centros_de_formacoes/create')
 
 <footer style="width:100%;left:0;bottom:0;box-shadow:0 0 5px 5px lightblue; position:fixed;">
 <img src="{{ URL::asset ('img/footer.jpg')}}" style="width:100%" >

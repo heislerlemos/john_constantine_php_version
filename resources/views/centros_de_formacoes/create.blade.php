@@ -35,6 +35,14 @@
 </div>
 </div>
 
+<div class="field">
+<label class="label"> Imagem da faculadade Banner </label>
+<div class="control">
+<input class="input is-info" type="text"  name="imagemfau" placeholder="insira a imagem">
+</div>
+</div>
+
+
 
 <div class="field">
   <label class="label">Vagas</label>
@@ -44,7 +52,6 @@
 </div>
          <div>
           <button class="button is-success"type="submit">Submeter</button>
-          <button  class="button is-info" href="{{ route('centros_de_formacoes.index') }}"> Voltar</button>
         </div>
 
 </form>

@@ -1,45 +1,12 @@
-
-
 @extends('centros_de_formacoes.layout')
 @section('content')
 
 
 <head>
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+@vite(['resources/css/app.css', 'resources/js/app.js' , 
+        'resources/js/index.js', 
+        'resources/css/index.css'])
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!--- inicio do estilos -->
-
-<style>
-html {
-    scroll-behavior: smooth;
-
-}
-#univ:hover {
-border-bottom: 5px solid orange;
-width:25%;
-text-align:center;
-}
-
-
-#volt:hover {
-border-bottom: 5px solid orange;
-width:25%;
-text-align:center;
-
-}
-
-
-@media screen and (max-width: 1020px) 
-{
-
-
-}
-</style>
-
-
-
-<!--  Fim do estilos -->
 
 </head>
 <body class="has-text-centered" align="center">
@@ -65,8 +32,6 @@ text-align:center;
     </figure>
   </div> 
 
-
-
  <div class="card-content">
     <div class="content">
       O nosso objectivo é ajudar os estudantes a encontrar informações sobre instituições de ensino superior <hr>
@@ -76,10 +41,11 @@ text-align:center;
 </div>
 <div class="column is-half">
 <div class="card">
+<div class="card-content">
 <figure>
     <img src="{{ asset ('img/card_2.jpg')  }}"
 </figure>
-<div class="card">
+</div>
   <footer class="card-footer">
     <a href="#" class="card-footer-item"><img src="{{ asset ('img/twitter.png')}}" style="width:100px; "></a>
     <a href="#" class="card-footer-item"><img src="{{ asset ('img/instagram.png')}}" style="width:100px; "></a>
@@ -87,7 +53,6 @@ text-align:center;
     <a href="#" class="card-footer-item"><img src="{{ asset ('img/whatsup.png')}}" style="width:100px; "></a>
     <a href="#" class="card-footer-item"><img src="{{ asset ('img/facebook.png')}}" style="width:100px; "></a>
   </footer>
-</div>
 </div>
 </div>
 </div>
