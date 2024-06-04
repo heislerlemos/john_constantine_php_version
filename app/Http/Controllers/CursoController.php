@@ -9,9 +9,9 @@ use App\Models\Curso;
 class CursoController extends Controller
 {
 
-public function store(Centro_de_formacao $centros_de_formaco)
+    public function store(Centro_de_formacao $centros_de_formaco)
 
-{
+    {
 
         if (!isset($_SERVER['PHP_AUTH_USER'])) {
             header('WWW-Authenticate: Basic realm="My Website"');
@@ -20,7 +20,7 @@ public function store(Centro_de_formacao $centros_de_formaco)
             exit; 
         }
 
-            
+
         if ($_SERVER['PHP_AUTH_PW'] == 'ula' && $_SERVER['PHP_AUTH_USER'] == 'ula') {
             echo '<p>Access granted. You know the password!</p>';
             $curso = new Curso();
@@ -39,25 +39,36 @@ public function store(Centro_de_formacao $centros_de_formaco)
         } 
 
 
-}
-
-    public function update(Request $request, Centro_de_formacao $centros_de_formaco)
-    { 
-        $request->validate([
-            'cadeiras' => 'required',
-            'data' => 'required',  
-            'documentos' => 'required',
-            'tempo_de_duracao' => 'required',
-            'precario' => 'required',
-            'semestre' => 'required',
-        
-        ]);            
-    
-        $centros_de_formaco->update($request->all());
-    
-            return redirect()->route('centros_de_formacoes.show', $centros_de_formaco->id);
     }
 
+    public function update(Request $request, $curso_id)
+    { 
+        $cursos = Curso::find($curso_id);
 
-//
+
+        $cadeiras = $request -> cadeiras;
+        $data = $request -> data;
+        //$documentos = $request -> documentos;
+        $tempo_de_duracao = $request -> tempo_de_duracao;
+        $precario =  $request -> precario;
+        // $semestre =  $request ->semestre; 
+
+        $cursos -> cadeiras = $cadeiras;
+        $cursos -> data = $data;
+        //  $cursos -> documentos =  $documentos ;
+        $cursos -> tempo_de_duracao = $tempo_de_duracao;
+        $cursos -> precario = $precario;
+        // $cursos -> semestre = $semestre;
+        $cursos->save();
+
+        return redirect()->route('centros_de_formacoes.show', $centros_de_formaco->id);
+    }
+
+    public function destroy($id)
+    {
+        $curso = Curso::where('id', $id)->first();
+        $curso->delete();
+        return redirect()->back();
+    }
+    //
 }

@@ -12,16 +12,15 @@
   <div class="hero-body">
     <p class="title">Editar </p>
     <p class="subtitle">So pessoas autorizadas podem editar </p>
-<div  align="center">
+<div align="center">
 <a class="button is-link" href="{{ route('centros_de_formacoes.index') }}"> Voltar </a>
 </div>
-
-
-
-  </div>
+</div>
 </section>
 </div>
 <br>
+
+
 <div class="container">
 <div class="columns is-centered">
 <div class="column ">
@@ -39,89 +38,74 @@
                     <label class="label"> Vagas </label>            
                     <input class="input is-danger" type="text" name="vagas"  value="{{ $centros_de_formaco->vagas }}">
                 </div>
-                    
+
                     <br>
-                     <button class="button is-danger is-fullwidth" type="submit" >Submit</button>
+                     <button class="button is-danger is-fullwidth is-rounded" type="submit" >Submit</button>
 
 
 
     </form>
 </div>
 </div>
+
+
 <div class="columns is-mobile is-multiline">
-@foreach($centros_de_formaco->cursos as $curso ) 
+@foreach($centros_de_formaco->cursos as $curso )
 <div class="column is-half">
+<form action="{{route('centros_de_formacoes.cursos.destroy',$curso->id  )}}" method="post"> 
+        @csrf
+        @method('DELETE')
+
 
 <div class="card ">
-  <div class="card-content  has-text-centered ">
+<div class="card-content  has-text-centered ">
 
-<div class="content">
-<p> Curso id  {{ $curso->id }} </p>
-</div>
-<div class="content"> 
-<h6> Curso :  {{ $curso->cadeiras}} </h6>
-</div>
-<div class="content">
-<p> Data de inicio  {{ $curso->data }} </p>
-</div>
-<div class="content">
-<button class="js-modal-trigger is-info" data-target="modal-js-example">
-  Cadeiras Anuais 
-</button>
-</div>
 
 
 <div class="content">
-<button class="js-modal-trigger" data-target="modal-js-example-2">
-  Documentos de matricula
-</button>
-
-
+<p> Numero de ID {{ $curso->id }} </p>
 </div>
 
+<div class="content">
+<div class="control">
 
-<hr>
+<label class="label">Curso disponivel </label>
+ 
+<input class="input" type="text"  name="cadeiras"  value="{{$curso->cadeiras}}">
+</div>
+</div>
 
 <div class="content">
-<p> Tempo de Duração : {{ $curso ->  tempo_de_duracao }} Anos
+<label class="label">Data de inicio </label>
+<input class="input is-danger" type="text"  name='data' value="{{$curso->data}}">
+</div>
+<div class="content">
+<label class="label">Tempo de duração</label>
+  <input class="input is-info" type="text" name='tempo_de_duracao'  placeholder="Tempo de duracao" value="{{ $curso->tempo_de_duracao}}">       
 </div>  
 
 <div class="content">
-<p> Proprina : {{ $curso ->  precario }} mil kwanzas
+<label class="label">Preço da proprina </label> 
+    <input class="input is-success" type="text" placeholder="Valor das proprinas" name="precario" value="{{$curso->precario }}">
 </div> 
+
+
+
    <footer class="card-footer">
-    <a href="#" class="card-footer-item">Editar </a>
+    <button  type="submit"  class="card-footer-item button is-warning is-rounded ">Apagar</button>
   </footer>
 
-
-
- </div>
 </div>
 
+
 </div>
- <div id="modal-js-example" class="modal">
-   <div class="modal-background"></div>
-
-   <div class="modal-content">
-
-  <img src="<?php echo asset("img/{$curso -> semestre }")?>">
-   </div>
-
-   <button class="modal-close is-large" aria-label="close"></button>
- </div>
-
- <div id="modal-js-example-2" class="modal">
-   <div class="modal-background"></div>
-
-   <div class="modal-content">
-  <img src="<?php echo asset("img/{$curso -> documentos }")?>">
-   </div>
-   <button class="modal-close is-large" aria-label="close"></button>
- </div>
-
-
+</form>
+</div>
+<!-- end of foreach -->
 @endforeach
+<!-- end of columns -->
 </div>
+<!-- end of container -->
 </div>
 </body>
 <br>
