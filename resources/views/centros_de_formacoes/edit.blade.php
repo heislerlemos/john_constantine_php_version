@@ -47,73 +47,75 @@
 
     </form>
 </div>
+</div>
+<div class="columns is-mobile is-multiline">
+@foreach($centros_de_formaco->cursos as $curso ) 
 <div class="column is-half">
-<form action="{{route("centros_de_formacoes.cursos.store",$centros_de_formaco->id)}}" method="POST">
-@csrf <!-- {{ csrf_field() }} -->
-@method('PUT')
 
-<div class="field">
-  <label class="label">ID do Curso</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text " name="cadeiras"  value="{{$centros_de_formaco->id}}">
-  </div>
+<div class="card ">
+  <div class="card-content  has-text-centered ">
+
+<div class="content">
+<p> Curso id  {{ $curso->id }} </p>
+</div>
+<div class="content"> 
+<h6> Curso :  {{ $curso->cadeiras}} </h6>
+</div>
+<div class="content">
+<p> Data de inicio  {{ $curso->data }} </p>
+</div>
+<div class="content">
+<button class="js-modal-trigger is-info" data-target="modal-js-example">
+  Cadeiras Anuais 
+</button>
 </div>
 
 
+<div class="content">
+<button class="js-modal-trigger" data-target="modal-js-example-2">
+  Documentos de matricula
+</button>
 
 
-<div class="field">
-  <label class="label">Cursos</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text " name="cadeiras"  value="{{$centros_de_formaco->cadeiras}}">
+</div>
+
+
+<hr>
+
+<div class="content">
+<p> Tempo de Duração : {{ $curso ->  tempo_de_duracao }} Anos
+</div>  
+
+<div class="content">
+<p> Proprina : {{ $curso ->  precario }} mil kwanzas
+</div> 
   </div>
 </div>
 
-<div class="field">
-  <label class="label"> Preçario </label>
-  <div class="control ">
-    <input class="input is-success" type="text" placeholder="Text input" name="precario" value="{{$centros_de_formaco->precario }}">
-  </div>
 </div>
+ <div id="modal-js-example" class="modal">
+   <div class="modal-background"></div>
 
-<div class="field">
-  <label class="label">Data</label>
-  <div class="control">
-    <input class="input is-danger" type="text"  name='data' value="{{$centros_de_formaco->data}}">
-  </div>
-</div>
+   <div class="modal-content">
 
-<div class="field">
-  <label class="label">Tempo de Duração</label>
-  <div class="control">
-  <input class="input is-info" type="text" name='tempo_de_duracao' value="{{ $centros_de_formaco->tempo_de_duracao}}">       
+  <img src="<?php echo asset("img/{$curso -> semestre }")?>">
+   </div>
+
+   <button class="modal-close is-large" aria-label="close"></button>
  </div>
-</div>
 
-<div class="field">
-  <label class="label">Documentos</label>
-  <div class="control">
-    <input class="input is-info" name="documentos" placeholder="Insira o nome do documento " value="{{$centros_de_formaco->documentos}}" type="text">
-  </div>
-</div>
+ <div id="modal-js-example-2" class="modal">
+   <div class="modal-background"></div>
 
-<div class="field">
-<label class="label">Semestre</label>
-<div class="control">
-<input class="input is-danger" type="text" name="semestre" value="{{$centros_de_formaco -> semestre  }}">
-</div>
-</div>
+   <div class="modal-content">
+  <img src="<?php echo asset("img/{$curso -> documentos }")?>">
+   </div>
+   <button class="modal-close is-large" aria-label="close"></button>
+ </div>
 
 
-<div class="field is-grouped">
-  <div class="control">
-    <button class="button is-link " type="submit"> Publicar o curso </button>
-  </div>
-</form>
+@endforeach
 </div>
-</div>
-</div>
-
 </div>
 </body>
 <br>
