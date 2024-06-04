@@ -89,7 +89,13 @@
 <div class="content">
 <p> Proprina : {{ $curso ->  precario }} mil kwanzas
 </div> 
-  </div>
+   <footer class="card-footer">
+    <a href="#" class="card-footer-item">Editar </a>
+  </footer>
+
+
+
+ </div>
 </div>
 
 </div>
