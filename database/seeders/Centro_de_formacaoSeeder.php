@@ -62,7 +62,7 @@ class Centro_de_formacaoSeeder extends Seeder
                 'nome' => 'Universidade Lusíadas',
                 'localizacao' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.682318553423!2d13.227224875143342!3d-8.815885391237156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f2522f49dc0b%3A0x1e6469bda5ac2983!2sUniversidade%20Lus%C3%ADada%20de%20Angola!5e0!3m2!1spt-PT!2sao!4v1715178676445!5m2!1spt-PT!2sao',
                 'vagas' => 639,
-                'imagemfau' => 'upra.jpg',
+                'imagemfau' => 'lusiada.jpg',
             ],
             [
                 'imglink' => 'https://th.bing.com/th/id/R.d83c1c7977fc4c0c80c06afb3bb8809c?rik=uPzImiqybYY6Jg&pid=ImgRaw&r=0',
