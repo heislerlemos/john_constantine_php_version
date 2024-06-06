@@ -133,42 +133,42 @@
 <div class="field">
   <label class="label"> Preçario </label>
   <div class="control ">
-    <input class="input is-success" type="text" placeholder="Text input" name="precario" value="{{$centros_de_formaco->precario }}">
+    <input class="input" type="text" placeholder="Text input" name="precario" value="{{$centros_de_formaco->precario }}">
   </div>
 </div>
 
 <div class="field">
   <label class="label">Data</label>
   <div class="control">
-    <input class="input is-danger" type="text"  name='data' value="{{$centros_de_formaco->data}}">
+    <input class="input" type="text"  name='data' value="{{$centros_de_formaco->data}}">
   </div>
 </div>
 
 <div class="field">
   <label class="label">Tempo de Duração</label>
   <div class="control">
-  <input class="input is-info" type="text" name='tempo_de_duracao' value="{{ $centros_de_formaco->tempo_de_duracao}}">       
+  <input class="input" type="text" name='tempo_de_duracao' value="{{ $centros_de_formaco->tempo_de_duracao}}">       
  </div>
 </div>
 
 <div class="field">
   <label class="label">Documentos</label>
   <div class="control">
-    <input class="input is-info" name="documentos" placeholder="Insira o nome do documento " value="{{$centros_de_formaco->documentos}}" type="text">
+    <input class="input" name="documentos" placeholder="Insira o nome do documento " value="{{$centros_de_formaco->documentos}}" type="text">
   </div>
 </div>
 
 <div class="field">
 <label class="label">Semestre</label>
 <div class="control">
-<input class="input is-danger" type="text" name="semestre" value="{{$centros_de_formaco -> semestre  }}">
+<input class="input" type="text" name="semestre" value="{{$centros_de_formaco -> semestre  }}">
 </div>
 </div>
 
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-warning  " type="submit"> Publicar o curso </button>
+    <button class="button is-success is-outlined "  type="submit"> Publicar o curso </button>
   </div>
 </form>
 </div>

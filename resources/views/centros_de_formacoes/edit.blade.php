@@ -50,22 +50,22 @@
 
 <div class="content">
 <label class="label">Data de inicio </label>
-<input class="input is-danger" type="text"  name='data' value="{{$curso->data}}">
+<input class="input" type="text"  name='data' value="{{$curso->data}}">
 </div>
 <div class="content">
 <label class="label">Tempo de duração</label>
-  <input class="input is-info" type="text" name='tempo_de_duracao'  placeholder="Tempo de duracao" value="{{ $curso->tempo_de_duracao}}">       
+  <input class="input " type="text" name='tempo_de_duracao'  placeholder="Tempo de duracao" value="{{ $curso->tempo_de_duracao}}">       
 </div>  
 
 <div class="content">
 <label class="label">Preço da proprina </label> 
-    <input class="input is-success" type="text" placeholder="Valor das proprinas" name="precario" value="{{$curso->precario }}">
+    <input class="input " type="text" placeholder="Valor das proprinas" name="precario" value="{{$curso->precario }}">
 </div> 
 
 
 
    <footer class="card-footer">
-    <button  type="submit"  class="card-footer-item button is-warning  ">Editar curso</button>
+    <button  type="submit"  class="card-footer-item button is-info  ">Editar curso</button>
 
     
 
