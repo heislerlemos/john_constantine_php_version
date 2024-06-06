@@ -30,3 +30,4 @@ Route::put('centros_de_formacoes/{centros_de_formaco}/cursos', [CursoController:
 Route::get('/procurar', [Centros_De_FormacoesController::class, 'procurar']);
 Route::get('centros_de_formacoes/{centros_de_formaco}/edit', [EdicaoController::class, 'estudanteid'] );
 Route::delete('/cursos/destroy/{id}', [CursoController::class, 'destroy'])->name('centros_de_formacoes.cursos.destroy');
+Route::put('/cursos/update/{curso_id}', [CursoController::class, 'update'])->name('centros_de_formacoes.cursos.update');

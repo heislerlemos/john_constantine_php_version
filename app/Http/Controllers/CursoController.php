@@ -61,7 +61,7 @@ class CursoController extends Controller
         // $cursos -> semestre = $semestre;
         $cursos->save();
 
-        return redirect()->route('centros_de_formacoes.show', $centros_de_formaco->id);
+        return redirect()->back();
     }
 
     public function destroy($id)

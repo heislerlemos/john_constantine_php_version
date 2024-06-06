@@ -66,6 +66,37 @@
 <p> Numero de ID {{ $curso->id }} </p>
 </div>
 
+   <footer class="card-footer">
+    <button  type="submit"  class="card-footer-item button is-danger is-rounded ">Apagar</button>
+  </footer>
+
+</div>
+
+
+</div>
+</form>
+</div>
+<!-- end of foreach -->
+@endforeach
+<!-- end of columns -->
+</div>
+<div class="columns is-mobile is-multiline">
+@foreach($centros_de_formaco->cursos as $curso )
+<div class="column is-half">
+<form action="{{route('centros_de_formacoes.cursos.update',$curso->id  )}}" method="post"> 
+        @csrf
+        @method('PUT')
+
+
+<div class="card ">
+<div class="card-content  has-text-centered ">
+
+
+
+<div class="content">
+<p> Numero de ID {{ $curso->id }} </p>
+</div>
+
 <div class="content">
 <div class="control">
 
@@ -92,7 +123,7 @@
 
 
    <footer class="card-footer">
-    <button  type="submit"  class="card-footer-item button is-warning is-rounded ">Apagar</button>
+    <button  type="submit"  class="card-footer-item button is-warning is-rounded ">edit</button>
   </footer>
 
 </div>
@@ -105,9 +136,12 @@
 @endforeach
 <!-- end of columns -->
 </div>
+
 <!-- end of container -->
 </div>
 </body>
+
+
 <br>
 <br>
 <br>
