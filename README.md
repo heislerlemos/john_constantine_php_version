@@ -1,9 +1,9 @@
 
 # Constantine
 
-Projecto desenvolvido para o trabalho de escola do 2º semestre Engenharia Informatica Lusiada.
+Project developed for the school work of the 2nd semester Informatics Engineering Lusiada.
 
-Este app serve para pesquisar informação sobre as universidades do pais para evitar transtornos de o estudante ter que aguentar fila para que possa receber informação
+This app is used to search for information about the country's universities to avoid the inconvenience of the student having to stand in line so that he can receive information
 ## Installation
 
 Install my-project with npm
