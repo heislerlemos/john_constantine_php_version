@@ -52,6 +52,8 @@ APP_KEY=base64:t7LE8iajT5xWkgQzlYRiztL50lLluOXtWweJk3BOyiU=
 De seguida popuralize o website 
 
 ```bash
+
+php artisan migrate 
 php artisan db:seed  --class=Centro_de_formacaoSeeder
 php artisan db:seed  --class=CursoSeeder
 
